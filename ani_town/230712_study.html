@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .parent > table{
+            display: inline-block;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>방명록입니다</h1>
+    <br>
+    작성자 <input type="text" id="writer">
+    <br>
+    내용 <input type="text" id="container">
+    <button onclick = "input()">작성</button>
+    <br>
+
+    <div class="parent">
+        <table id="num">번호</table>
+        <table id="writer">작성자</table>
+        <table id="comend">내용</table>
+        <table id="day">작성일</table>
+ 
+    </div>
+       
+    
+
+    <script>
+        let num =1
+        function addRow(){
+            let table = document.querySelector("table")
+            let tr = document.createElement("tr")
+            let NumId = document.createElement("td")
+            let writerId = document.getElementById("writer").value
+
+            tr.appendChild(NumId)
+            tr.appendChild(writerId)
+
+            table.appendChild(tr)
+            num++
+        }
+        
+
+
+
+        now = new Date()
+        
+        function input(){
+            let human = document.getElementById("human").value
+            let container = document.getElementById("container").value
+        }
+        
+
+        
+        
+    </script>
+</body>
+</html>
