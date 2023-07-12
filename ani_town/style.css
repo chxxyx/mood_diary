@@ -18,6 +18,7 @@ section .sky {
 
 section .sky .sun {
   width: 180px;
+  
 }
 
 section .sky .moon {
