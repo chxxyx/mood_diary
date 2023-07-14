@@ -8,6 +8,7 @@
     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js" integrity="sha256-lSjKY0/srUM9BE3dPm+c4fBo1dky2v27Gdjm2uoZaL0=" crossorigin="anonymous"></script>
     
     <style>
+        
         div {
             width: 300px;
             height: 300px;
@@ -16,22 +17,22 @@
         }
 
         .apple {
-            background-image: url('../image/apple.png');
+            background-image: url('../html/apple.jpeg');
         }
         .banana {
-            background-image: url('../image/banana.png');
+            background-image: url('../html/banana.jpg');
         }
         .grape {
-            background-image: url('../image/grape.png');
+            background-image: url('../html/prape.jpg');
         }
         .peach {
-            background-image: url('../image/peach.png');
+            background-image: url('../html/peach.jpg');
         }
     </style>
 </head>
 <body>
     <!-- <div class="apple"></div> -->
-    <img src="../image/apple.png" width="300" height="300" />
+    <img src="../html/apple.jpeg" width="300" height="300" />
     <br />
     <button type="button" onclick="changeFruits('apple')">사과</button>
     <button type="button" onclick="changeFruits('banana')">바나나</button>
@@ -40,8 +41,14 @@
 
     <script>
         function changeFruits(fruit) {
+
+            if(fruit=apple){
+                $("img").attr("src", `../html/image/${fruit}.jpng`)
+            }else{
+                 $("img").attr("src", `../html/image/${fruit}.png`)
+            }
             // $("div").removeClass().addClass(fruit)
-            $("img").attr("src", `../image/${fruit}.png`)
+           
         }
     </script>
 </body>

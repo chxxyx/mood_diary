@@ -22,7 +22,7 @@
 </head>
 <body>
 
-    날짜 : <input type="text" id="day">
+    날짜 : <input type="text" id="date">
     <br>
     내용 : <input type="text" id="sk">
     <br>
@@ -98,11 +98,31 @@
     
 
     <script>
+        let td ; null;
+
         $('td').on('click',function(obj){
             let date = $(this).text()
             console.log(date)
             $("#date").val(date)
+            td=this
         })
+        
+
+        $("button").on("click",function(){
+            let content = $("#sk").val()
+            $(td).parent().append(`<div>${content}<div/>`)
+
+        })
+        //e.currentTarget으로 받아올 수도 있음==function(e){
+            //console.log(e.currentTarget)
+            //1. 클릭요소의 날짜
+           // $(this).text()
+            //2. input #day 선택해서 1번값 넣기 
+            
+        // }
+
+
+     
 
         var input = $("day").val()
         console.log(input)
@@ -111,7 +131,7 @@
         let day = date
         console.log(day)
 
-        
+
         // $('date').add('text',function(todo){
         //     let list = document.getElementById('day','sk').value
         //     console.log(list)
