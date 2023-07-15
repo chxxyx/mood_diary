@@ -1,49 +1,40 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-
     <style>
-
-
-        div{
-            height: 50px;
-            width: 50px;
-            background-color: aqua;
+        .container{
+            display: flex;
+        }
+        .div {
+            width: 100px;
+            height: 100px;
+            background-color: black;
+            margin-bottom: 10px;
+            border-radius: 10%;
+            margin-left: 10px;
+            margin-right: 10px;
             
         }
-        
-        
-        
 
-
-        @media screen and(min-width : 700px) {
-            div{
-
-                background-color: black;
-        
-                   
+        @media screen and (max-width: 700px){
+            .container{
+                display: block;
             }
-            .parent{
-                display: flex;
-            }   
-
+            .div {
+                background-color: skyblue;
+            }
         }
-
-
     </style>
 </head>
+
 <body>
-    
-    <div class="parent">
-        <div></div>
-        
-        <div></div>
-        
-        <div></div>
+    <div class="container">
+        <div class="div"></div>
+        <div class="div"></div>
+        <div class="div"></div>
     </div>
-    
 </body>
 </html>
