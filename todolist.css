@@ -50,7 +50,7 @@ button {
 
 .todo-input {
     background-color: #FEEAFA;
-    color: #8E9AAF;
+    color: #60656e;
     width: 80%;
     text-align: center;
     border: 0;
@@ -86,4 +86,16 @@ p.info {
     text-align: center;
     color: #8E9AAF;
     font-family: malgun 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.all-button:hover{
+    box-shadow: 200px 0 0 0 #DEE2FF inset, 
+    -200px 0 0 0 #8E9AAF inset;;
+}
+.acrive-button:hover{
+    box-shadow: 200px 0 0 0 #DEE2FF inset, 
+    -200px 0 0 0 #8E9AAF inset;;
+}
+.conmpleted-button:hover{
+    box-shadow: 200px 0 0 0 #DEE2FF inset, 
+    -200px 0 0 0 #8E9AAF inset;;
 }
