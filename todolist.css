@@ -2,12 +2,21 @@ html {
 	height: 100%;
 }
 
+
 body {
-    display: flex;
+    /* display: flex; */
     flex-wrap: nowrap;
     justify-content: center;
     background-color:#DEE2FF;
     min-height: 100%;
+}
+.container{
+    display: flex;
+    min-height: 100%;
+    width: calc(50%) ;
+    position: absolute;
+    left: 50%;
+    
 }
 .mainBox{
     position: relative(left 30px);
@@ -81,7 +90,7 @@ button {
     border-radius: 8px;
 }
 
-p.info {
+p.message {
     margin-top: 1.5rem;
     text-align: center;
     color: #8E9AAF;
@@ -90,6 +99,7 @@ p.info {
 .all-button:hover{
     box-shadow: 200px 0 0 0 #DEE2FF inset, 
     -200px 0 0 0 #8E9AAF inset;;
+    
 }
 .acrive-button:hover{
     box-shadow: 200px 0 0 0 #DEE2FF inset, 
@@ -99,3 +109,6 @@ p.info {
     box-shadow: 200px 0 0 0 #DEE2FF inset, 
     -200px 0 0 0 #8E9AAF inset;;
 }
+/* .mes:active{
+
+} */
