@@ -14,20 +14,33 @@
 
     <div class="container">
 
-<div class="mainBox">
+    <div class="mainBox">
          <div class="todo">
         <div class="todo-title">to-do list</div>
         <div class="todo-box">
 
             <div class="todo-input-box">
-                <button class="complete">✔</button>
+                <button id="complete" class="complete">✔</button>
                 <input type="text" id="todo-input" class="todo-input" placeholder="해야 할 일을 입력해주세요.">
             </div>
-            <ul class="todo-list">
-    
-            </ul>
+
+            <div id="text-box">
+
+             <ul class="todo-list">
+                <div class="text"></div>
+                <div>
+                    <button class="complete"></button>
+                    <button class="no"></button>
+                </div>
+                
+             </ul>
+
+            </div>
+        
+
             <div class="todo-bottom">
                 <div class="left-items"></div>
+
                 <div class="button-group">
                     <button class="all-button">All</button>
                     <button class="acrive-button">Active</button>
