@@ -37,9 +37,16 @@ body {
     width: auto;
     height: 30px;
 }
-
+.mainlogo{
+    margin-right: 10px;
+}
 /* nav */
 
+@media screen and (max-width:768px){
+    .largestbox{
+        width: 50%;
+    }
+  }
 
 /* cal */
 
@@ -73,23 +80,17 @@ tbody td {
 .calendar {
     text-align: center;
     margin: 0 auto;
-    margin-left: 150px;
-    margin-top: 70px;
     height: 500px;
     width: 500px;
     opacity: 0.7;
 }
 .cal{
     display: flex;
-    flex-wrap: wrap;
+    margin-top: 70px;
 
 }
 section {
-    width: auto;
-    margin-bottom: 30px;
-    position: absolute;
-    /* transform: translate(-50%, -50%); */
- 
+    width: 700px;
 }
 
 .date {
@@ -101,22 +102,29 @@ section {
     height: 70px;
     padding: 5px;
 }
-
+.largestbox{
+    /* float: left; */
+    display: flex;
+    flex-wrap: wrap;
+}
 
 
 /* cal */
 
 
+
 .mycontainer{
+    width: 500px;
     display: flex;
-    width: 100% ;
-    /* position: absolute; */
-    /* justify-content: right; */
-    left: 50%;
+    width: auto ;
+    justify-content: center;
+    /* left: 50%; */
 }
 
 .todo-wrapper {
-    justify-content: right;
+    margin: 0 auto;
+    width: 500px;
+    justify-content: center;
     margin-top: 3rem;
     min-width: 600px;
 }
@@ -136,6 +144,7 @@ section {
 
 .todo-input-box {
     display: flex;
+    width: auto;
     flex-wrap: nowrap;
     flex-direction: row;
     height: 3rem;
@@ -161,12 +170,17 @@ button {
     font-size: 1.2rem;
     
 }
+.complete-all-btn.checked {
+    color: green
+}
+
 
 
 
 .todo-input {
+    padding-left: 80px;
     background-color:#EFD3D7;
-    width: 80%;
+    width: 500px;
     text-align: center;
     border: 0;
     outline: none;
@@ -276,7 +290,7 @@ p.info {
     text-align: center;
     color: #8E9AAF;
 }
-.all-button:hover{
+.complete-all-btn:hover{
     box-shadow: 200px 0 0 0 #DEE2FF inset, 
     -200px 0 0 0 #8E9AAF inset;;
 }
