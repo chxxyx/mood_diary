@@ -10,16 +10,18 @@
     <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js" integrity="sha256-lSjKY0/srUM9BE3dPm+c4fBo1dky2v27Gdjm2uoZaL0=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./board.css">
-   
+    <!-- 폰트어썸 -->
+    <script src="https://kit.fontawesome.com/3dd417ebad.js" crossorigin="anonymous"></script>
     <!-- 스와이퍼 -->
     <link  rel="stylesheet"  href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
-    
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
 </head>
 <body>
-    
-    <div class="box1">
-        <div id="date2"></div>
-    </div>
+    <div class="nav123" style="background-color: pink; height: 40px; width: 100%;"></div>
+    <div class="friends">Friends</div>
+    <div id = "date2"></div>
+    <div class="main1">
+    <div class="box1"></div>
    <!-- Slider main container -->
     <swiper-container class="mySwiper" effect="cards" grab-cursor="true">
         <swiper-slide>
@@ -29,8 +31,14 @@
                     <img class="imgs" src="./기쁨.png" alt="기쁨">
                 </div>
                 <div class="frBtn">
-                    <div class="Good"></div>
-                    <div class="comment"></div>
+                    <div class="Good">
+                       <span onclick="heart()"><i class="fa-regular fa-heart heart" ></i></span>
+                        <span onclick="heart2()"></span>
+                    </div>
+                    <div class="comment">
+                        <i class="fa-regular fa-paper-plane plane"></i>
+                        <i class="fa-solid fa-paper-plane boldplane"></i>
+                    </div>
                 </div>
             </div>
         </swiper-slide>
@@ -44,8 +52,9 @@
       <script src="./board.js"></script>
       <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-element-bundle.min.js"></script>
       <!-- Slider main container -->
+    </div>
+   
+
     
-
-
 </body>
 </html>

@@ -5,25 +5,97 @@ body {
 
     );
 }
+
+.friends {
+    top: 60px;
+    font-size: 40px;
+    text-align: center;
+
+}
+.main1{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-left: 100px;
+    padding: 0 100px 0 100px;
+    
+}   
 /* 친구카드css */
+
 .frCard{
 
 }
+.frName{
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 10px;
+    
+}
 .frImg{
-    width: 100px;
-    height: 100px;
+    display: flex;
+    margin-bottom: 40px;
+    margin-top: 30px;
+    padding-top: 10px;
 }
 .imgs{
-    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
     height: auto;
+    
+}
+.frBtn{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 20px;
+
 }
 
+/* icon */
 
+.heart{
+    font-size: 70px;
+}
+.heart:hover {
+    
+    cursor: pointer;
+    font-size: 60px;
+    margin: 5px 0 0 5px;
+}
+.redHeart{
+    position: absolute;
+    color: red;
+    font-size: 70px;
+    
+}
+.redHeart:hover {
+    cursor: pointer;
+    font-size: 60px;
+    margin: 5px 0 0 5px;
+
+}
+.plane {
+    font-size: 70px;
+}
+.plane:hover {
+    cursor: pointer;
+    font-size: 60px;
+    margin: 5px 5px 0 0;
+}
+.boldplane{
+    font-size: 70px;
+    display: none;
+}
+
+/* -------------- */
 
 
 swiper-container {
-    width: 500px;
-    height: 700px;
+    width: 350px;
+    height: 550px;
+   
   }
 
   swiper-slide {
@@ -37,59 +109,35 @@ swiper-container {
   }
 
   swiper-slide:nth-child(1n) {
-    background-color: rgb(206, 17, 17);
+    background-color: #DEE2FF;
   }
 
   swiper-slide:nth-child(2n) {
-    background-color: rgb(0, 140, 255);
+    background-color: #FEEAFA;
   }
 
   swiper-slide:nth-child(3n) {
-    background-color: rgb(10, 184, 111);
+    background-color: #EFD3D7;
   }
 
   swiper-slide:nth-child(4n) {
-    background-color: rgb(211, 122, 7);
+    background-color: #CBC0D3;
   }
 
   swiper-slide:nth-child(5n) {
-    background-color: rgb(118, 163, 12);
+    background-color: #8E9AAF;
   }
-
-  swiper-slide:nth-child(6n) {
-    background-color: rgb(180, 10, 47);
-  }
-
-  swiper-slide:nth-child(7n) {
-    background-color: rgb(35, 99, 19);
-  }
-
-  swiper-slide:nth-child(8n) {
-    background-color: rgb(0, 68, 255);
-  }
-
-  swiper-slide:nth-child(9n) {
-    background-color: rgb(218, 12, 218);
-  }
-
-  swiper-slide:nth-child(10n) {
-    background-color: rgb(54, 94, 77);
-  }
+.box1 {
+    width:  450px;
+    height: 550px;
+    background-color: rgba(233, 202, 212, 0.614);
+    border-radius: 18px;
+}
 .swiper {
     width: 600px;
     height: 300px;
-  }
-
-.box1 {
-    position: relative;
-    left: 200px;
-    top : 125px;
-    width:  500px;
-    height: 700px;
-    background-color: palevioletred;
 }
 #date2{
-    position: absolute;
     font-size: 40px;
     top : -50px;
-}   
+}
