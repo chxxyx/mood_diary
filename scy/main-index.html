@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mood-diary</title>
+
+    <link rel="stylesheet" href="./css/main-index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+   
+   
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous"> -->
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js" integrity="sha256-lSjKY0/srUM9BE3dPm+c4fBo1dky2v27Gdjm2uoZaL0=" crossorigin="anonymous"></script>
+
+
+
+<body>
+<header style="height: 50px;">
+</header>
+
+<main>
+    <section>
+        <div>
+          
+          <div class="title" colspan="5">
+              <p class="prev" onClick="prevCalendar();" style="cursor:pointer;">
+                <i class="fas fa-caret-left"></i>
+              </p>
+              <div class="ym-box">
+                <span id="cal-year"></span>
+                <span id="cal-month"></span>
+              </div>
+              <p class="next" onClick="nextCalendar();" style="cursor:pointer;">
+                <i class="fas fa-caret-right"></i>
+              </p>
+          </div>
+         
+          </div>
+            <table class="calendar">
+                <thead>
+                    <tr>
+                        <td style="color: tomato;">SUN</td>
+                        <td >MON</td>
+                        <td >TUE</td>
+                        <td >WED</td>
+                        <td >THU</td>
+                        <td>FRI</td>
+                        <td style="color: royalblue;">SAT</td>
+                    </tr>
+                </thead>
+
+                <tbody class="tbody"></tbody>
+            </table>
+         
+    </section>
+</div>
+
+
+<!-- 이모지 선택 모달 -->
+<div id="modalWrap">
+    <div id="modalBody">
+            <div class="imoticon" id="pleasure">
+              <img src="./기쁨.png" />
+            </div>
+            <div class="imoticon" id="sad">
+              <img src="./슬픔.png" />
+            </div>
+            <div class="imoticon" id="happy">
+              <img src="./행복.png" />
+            </div>
+            <div class="imoticon" id="angry">
+              <img src="./화남.png" />
+            </div>
+            <div class="imoticon" id="proud">
+              <img src="./뿌듯.png" />
+            </div>
+
+              <div class="line-box" id="line-box">
+                <i class="far fa-times-circle" style="color: #383838;"></i>
+              </div>
+
+    </div>
+</div>
+<!-- 작성 모달 박스 html -->
+<div id="modalWrap-2">
+  <div id="modalBody-2">
+    <!-- 이모티콘 -->
+    <div id="img-box">
+
+    </div>
+    <!-- 날짜 -->
+    <div class="modal-date" id="modal-date"></div>
+    <!-- 제목 입력 인풋 -->
+    <div class="modal-input-title">
+      <input class="input-title" type="text" required>
+      <label>Title</label>
+      <span class="input-span"></span>
+    </div>
+    <!-- 내용 입력 인풋 -->
+      <input class="diary-box" />
+  </div>
+</div>
+
+</main>
+<script src="./js/main-index.js"></script>
+</body>
+
+</html>

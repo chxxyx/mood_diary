@@ -1,0 +1,309 @@
+
+* {
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+  }
+
+body {
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAAXNSR0IArs4c6QAAABhJREFUKFNjZMAD3l257ss4PBSAvILPJwAPGRc57aMbnwAAAABJRU5ErkJggg==) repeat;
+    min-width: 770px;
+}
+/* Claendar */
+.title {
+    display: flex;
+    justify-content: space-around;
+    color: rgb(77, 77, 77);
+    font-size: 30px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.next i, .prev i{
+    color: rgb(132, 132, 132);
+    font-size: 25px;
+    margin-top: 10px;
+}
+
+thead td {
+    width: 200px;
+    height: 70px;
+    font-weight: 600;
+    color: rgb(90, 90, 90);
+    
+}
+
+tbody td {
+    width: 200px;
+    height: 50px;
+    cursor: pointer;
+    color: rgb(90, 90, 90);
+    transform: scale(1.0); /* 이미지 확대 */
+    transition: transform .5s; /* 시간 설정 */
+} 
+
+tbody td:hover {    /* hover 시 애니메이션 */
+    transform: scale(1.2);   /* 이미지 확대 */
+    transition: transform .5s;  /* 시간 설정 */
+}
+
+.calendar {
+    text-align: center;
+    margin: 0 auto;
+    height: 700px;
+    opacity: 0.7;
+}
+
+section {
+    width: 70%;
+    height: 90%;
+    margin-bottom: 30px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.date {
+    height: 15px;
+    margin-bottom: 5px;
+}
+
+.contents {
+    height: 70px;
+    padding: 5px;
+}
+
+/* 반응형 */
+/* 캘린더 섹션 */
+@media screen and (max-width: 768px){
+    section {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+/*  모달 css */
+
+  #modalWrap, #modalWrap-2 {
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 200px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    display: none;
+  }
+  
+  #modalBody {
+    position: relative;
+    width: 500px;
+    height: 500px;
+    padding: 30px 30px;
+    margin: 0 auto;
+    border: 1px solid rgb(205, 205, 205, 0.4);
+    background-color: white;
+    border-radius: 50%;
+    text-align: center;
+
+  }
+    @media screen and (max-width: 768px){
+        #modalBody {
+            position: relative;
+            width: 400px;
+            height: 400px;
+        }
+    }
+    @media screen and (max-width: 768px){
+        #modalBody-2 {
+            width: 60%;
+            height: 30%;
+        }
+    }
+
+    .imoticon {
+        display: inline-block;
+        width: 30%;
+        height: 30%;
+        background-color:rrgb(205, 205, 205);
+        transform: scale(1.0); /* 이미지 확대 */
+        transition: transform .5s; /* 시간 설정 */
+    }
+
+    .imoticon:hover {    /* hover 시 애니메이션 */
+        transform: scale(1.2);   /* 이미지 확대 */
+        transition: transform .5s;  /* 시간 설정 */
+    }
+
+    #pleasure{
+        position: absolute;
+        left: 5%;
+        top: 28%;
+        /* transform: translate(-30%, -50%); */
+    }
+
+    #sad {
+        position: absolute;
+        right: 5%;
+        top: 28%;
+    }
+
+    #happy {
+        position: absolute;
+        left: 15%;
+        top: 60%;
+    }
+
+    #angry {
+        position: absolute;
+        right: 15%;
+        top: 60%;
+    }
+
+  #modalBody img {
+    position: relative;
+    width: 100px;
+    height: 100px;
+  }
+
+    /* 모달 close-btn */
+    .line-box {
+        display: inline-block;
+        position: absolute;
+        top: 95%;
+        left: 50%;
+        transform: translate(-50%, -90%);
+
+      }
+      
+      /* X 버튼 !! */
+      i {
+        font-size: 3rem;
+        color: rgb(77, 77, 77);
+        cursor: pointer;
+        /* color: darkgrey; */
+      }
+    
+/* 일기 작성 모달 */
+
+  
+  #modalBody-2 {
+    position: relative;
+    width: 800px;
+    height: 500px;
+    padding: 30px 30px;
+    margin: 0 auto;
+    border: 2px solid black;
+    background-color: #fff;
+    text-align: center;
+  }
+
+  .diary-box {
+    position: absolute;
+    left: 32%;
+    top: 50%;
+    width: 500px;
+    height: 200px;
+    font-size: 25px;
+    border: 0;
+    border-radius: 15px;
+    outline: none;
+    padding-left: 10px;
+    background-color: rgb(233, 233, 233);
+  }
+
+  /* 작성 모달 안 이모지 */
+  #img-box {
+    display: inline-block;
+    position: absolute;
+    left: 3%;
+    top: 10%;
+    width: 200px;
+    height: 200px;
+  }
+
+  .in-modal-imoticon {
+    width: 170px;
+    height: 170px;
+  }
+
+  .modal-date {
+    position: absolute;
+    right: 10%;
+    font-size: 50px;
+    font-weight: 500;
+  }
+  
+  /* 제목 */
+  .modal-input-title {
+    position: absolute;
+    width: 300px;
+    left: 35%;
+    top: 30%;
+  }
+  
+  .input-title {
+    font-size: 15px;
+    color: #222222;
+    width: 300px;
+    border: none;
+    border-bottom: solid #aaaaaa 1px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    position: relative;
+    background: none;
+    z-index: 5;
+  }
+  
+  .input-title::placeholder { color: #aaaaaa; }
+  .input-title:focus { outline: none; }
+  
+  .input-span {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0%;  /* right로만 바꿔주면 오 - 왼 */
+    background-color: #666;
+    width: 0;
+    height: 2px;
+    border-radius: 2px;
+    transition: 0.5s;
+  }
+  
+  label {
+    position: absolute;
+    color: #aaa;
+    left: 10px;
+    font-size: 20px;
+    bottom: 8px;
+    transition: all .2s;
+  }
+  
+  .input-title:focus ~ label, .input-title:valid ~ label {
+    font-size: 16px;
+    bottom: 40px;
+    color: #666;
+    font-weight: bold;
+  }
+  
+  .input-title:focus ~ .input-span, .input-title:valid ~ .input-span {
+    width: 100%;
+  }
+
+  /* td .contents{
+    position: relative;
+    background-color: aqua;
+  } */
+  /* 작성 후 캘린더에 추가되는 이모티콘 */
+
+  .contents img {
+    position: absolute;
+    left: 50%;
+    top: 60%;
+    transform: translate(-50%, -60%);
+    width: 60px;
+    height: 60px;
+  }
