@@ -17,45 +17,57 @@
   <div class="diary">
     <div class="title">Diary</div>
     <div class="filterList">
-      <div class="all" >all</div>
-      <div class="happy">happy</div>
-      <div class="sad">sad</div>
-      <div class="proud">proud</div>
-      <div class="angry">angry</div>
-      <div class="pleasure">pleasure</div>
+      <div class="all" onclick="emtFilter('all')">all</div>
+      <div class="happy" onclick="emtFilter('happy')">happy</div>
+      <div class="sad" onclick="emtFilter('sad')">sad</div>
+      <div class="proud" onclick="emtFilter('proud')">proud</div>
+      <div class="angry" onclick="emtFilter('angry')">angry</div>
+      <div class="pleasure" onclick="emtFilter('pleasure')">pleasure</div>
     </div>
     <div class="myContainer">
-      <div class="item sad">
+      <div class="item happy" onclick="showModal('행복')">
+        <div class="diaryMonth">6</div>
+        <div class="diaryDate">10 wed</div>
+        <img src="./img/행복.png" class="emotion" alt="기분"/>
+        <div class="feeling">EXCITED</div>
+      </div>
+      <div class="item sad" onclick="showModal('슬픔')">
         <div class="diaryMonth">7</div>
         <div class="diaryDate">22 wed</div>
         <img src="./img/슬픔.png" class="emotion" alt="기분"/>
         <div class="feeling">proud</div>
       </div>
-      <div class="item angry">
+      <div class="item angry" onclick="showModal('화남')">
         <div class="diaryMonth">7</div>
         <div class="diaryDate">20 wed</div>
         <img src="./img/화남.png" class="emotion" alt="기분"/>
         <div class="feeling">EXCITED</div>
       </div>
-      <div class="item proud" >
+      <div class="item proud" onclick="showModal('뿌듯')">
         <div class="diaryMonth">7</div>
         <div class="diaryDate">15 wed</div>
         <img src="./img/뿌듯.png" class="emotion" alt="기분"/>
         <div class="feeling">EXCITED</div>
       </div>
-      <div class="item pleasure" >
+      <div class="item pleasure" onclick="showModal('기쁨')">
         <div class="diaryMonth">7</div>
         <div class="diaryDate">14 wed</div>
         <img src="./img/기쁨.png" class="emotion" alt="기분"/>
         <div class="feeling">EXCITED</div>
       </div>
-      <div class="item pleasure" >
+      <div class="item happy" onclick="showModal('행복')">
+        <div class="diaryMonth">6</div>
+        <div class="diaryDate">10 wed</div>
+        <img src="./img/행복.png" class="emotion" alt="기분"/>
+        <div class="feeling">EXCITED</div>
+      </div>
+      <div class="item pleasure" onclick="showModal('기쁨')">
         <div class="diaryMonth">6</div>
         <div class="diaryDate">16 wed</div>
         <img src="./img/기쁨.png" class="emotion" alt="기분"/>
         <div class="feeling">EXCITED</div>
       </div>
-      <div class="item happy" >
+      <div class="item happy" onclick="showModal('행복')">
         <div class="diaryMonth">6</div>
         <div class="diaryDate">10 wed</div>
         <img src="./img/행복.png" class="emotion" alt="기분"/>
