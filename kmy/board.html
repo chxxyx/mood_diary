@@ -26,7 +26,7 @@
     <swiper-container class="mySwiper" effect="cards" grab-cursor="true">
         <swiper-slide>
             <div class="frCard">
-                <div class="frName">KMY</div>
+                <div class="frName">Friend1</div>
                 <div class="frImg">
                     <img class="imgs" src="./기쁨.png" alt="">
                 </div>
@@ -34,16 +34,15 @@
                     <div class="Good">
                        <span onclick="toggleHeart()"><i class="fa-regular fa-heart heart" ></i></span>
                     </div>
-                    <div class="comment">
+                    <div id="pleasure" class="comment">
                         <i class="fa-solid fa-paper-plane boldplane"></i>
-                       
                     </div>
                 </div>
             </div>
         </swiper-slide>
         <swiper-slide>
             <div class="frCard">
-                <div class="frName">KMY</div>
+                <div class="frName">Friend2</div>
                 <div class="frImg">
                     <img class="imgs" src="./뿌듯.png" alt="">
                 </div>
@@ -51,15 +50,15 @@
                     <div class="Good">
                        <span onclick="toggleHeart()"><i class="fa-regular fa-heart heart" ></i></span>
                     </div>
-                    <div class="comment">
-                        <i class="fa-solid fa-paper-plane boldplane"></i>
+                    <div id=pride class="comment">
+                        <i class="fa-solid fa-paper-plane boldplane show"></i>
                     </div>
                 </div>
             </div>
         </swiper-slide>
         <swiper-slide>
             <div class="frCard">
-                <div class="frName">KMY</div>
+                <div class="frName">Friend3</div>
                 <div class="frImg">
                     <img class="imgs" src="./슬픔.png" alt="">
                 </div>
@@ -67,15 +66,15 @@
                     <div class="Good">
                        <span onclick="toggleHeart()"><i class="fa-regular fa-heart heart" ></i></span>
                     </div>
-                    <div class="comment">
-                        <i class="fa-solid fa-paper-plane boldplane"></i>
+                    <div id="sad" class="comment show">
+                        <i class="fa-solid fa-paper-plane boldplane show"></i>
                     </div>
                 </div>
             </div>
         </swiper-slide>
         <swiper-slide>
             <div class="frCard">
-                <div class="frName">KMY</div>
+                <div class="frName">Friend4</div>
                 <div class="frImg">
                     <img class="imgs" src="./행복.png" alt="">
                 </div>
@@ -83,14 +82,14 @@
                     <div class="Good">
                        <span onclick="toggleHeart()"><i class="fa-regular fa-heart heart" ></i></span>
                     </div>
-                    <div class="comment">
-                        <i class="fa-solid fa-paper-plane boldplane"></i>
+                    <div id="happy" class="comment show">
+                        <i class="fa-solid fa-paper-plane boldplane show"></i>
                     </div>
                 </div>
             </div>
         </swiper-slide>
         <swiper-slide>  <div class="frCard">
-            <div class="frName">KMY</div>
+            <div class="frName">Friend5</div>
             <div class="frImg">
                 <img class="imgs" src="./화남.png" alt="">
             </div>
@@ -98,8 +97,8 @@
                 <div class="Good">
                    <span onclick="toggleHeart()"><i class="fa-regular fa-heart heart" ></i></span>
                 </div>
-                <div class="comment">
-                    <i id="show" class="fa-solid fa-paper-plane boldplane"></i>
+                <div id="angry" class="comment">
+                    <i class="fa-solid fa-paper-plane boldplane"></i>
                 </div>
             </div>
         </div>
@@ -118,7 +117,15 @@
     <div class="background">
       <div class="window">
         <div class="popup">
-          <button id="close">팝업닫기</button>
+            <div class="modalDiv">
+                
+                <i class="fa-solid fa-xmark close"></i>
+                <i class="fa-solid fa-envelope"></i>
+                <header>댓글 남기기</header>
+                <textarea name="comment" 
+                maxlength="150" class="comment" placeholder="친구에게 댓글 남기기"></textarea>
+                <hr />
+            </div>
         </div>
         <div>
           <div></div>
@@ -136,10 +143,15 @@
 
   function close() {
     document.querySelector(".background").className = "background";
+    document.querySelector(".modalDiv>.comment").value=""
   }
-
-  document.querySelector("#show").addEventListener("click", show);
-  document.getElementById("close").addEventListener("click", close);
+//modal호출
+  document.getElementById("pleasure").addEventListener("click", show);
+  document.getElementById("pride").addEventListener("click", show);
+  document.getElementById("sad").addEventListener("click", show);
+  document.getElementById("happy").addEventListener("click", show);
+  document.getElementById("angry").addEventListener("click", show);
+  document.querySelector(".close").addEventListener("click", close);
   </script>
 </body>
 </html>

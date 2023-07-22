@@ -23,17 +23,20 @@ document.getElementById("date2").innerHTML=date2
 // }
 
  // 모든 div 요소에 대해 이벤트 리스너를 등록
- var hearts = document.querySelectorAll(".fa-heart");
+ let hearts = document.querySelectorAll(".fa-heart");
  hearts.forEach(function(i) {
      i.addEventListener("click", toggleHeart);
  });
 
- // 이 함수는 클릭한 div 요소에 클래스를 토글
+ //  클릭한 div 요소에 클래스를 토글
  function toggleHeart(event) {
-     var clickedhearts = event.currentTarget;
+     let clickedhearts = event.currentTarget;
      clickedhearts.classList.toggle("fa-regular");
      clickedhearts.classList.toggle("fa-solid");
     //  clickedhearts.classList.toggle("fa-heart");
      clickedhearts.classList.toggle("heart");
      clickedhearts.classList.toggle("redHeart");
  }
+
+ //textarea
+ 
