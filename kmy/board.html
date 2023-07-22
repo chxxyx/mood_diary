@@ -14,7 +14,7 @@
     <script src="https://kit.fontawesome.com/3dd417ebad.js" crossorigin="anonymous"></script>
     <!-- 스와이퍼 -->
     <link  rel="stylesheet"  href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
-    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    
 </head>
 <body>
     <div class="nav123" style="background-color: pink; height: 40px; width: 100%;"></div>
@@ -28,24 +28,82 @@
             <div class="frCard">
                 <div class="frName">KMY</div>
                 <div class="frImg">
-                    <img class="imgs" src="./기쁨.png" alt="기쁨">
+                    <img class="imgs" src="./기쁨.png" alt="">
                 </div>
                 <div class="frBtn">
                     <div class="Good">
-                       <span id='heart' onclick="heart()"><i class="fa-regular fa-heart heart" ></i></span>
-                        <span onclick="heart2()"></span>
+                       <span onclick="toggleHeart()"><i class="fa-regular fa-heart heart" ></i></span>
                     </div>
                     <div class="comment">
-                       <span><i class="fa-regular fa-paper-plane plane"></i></span>
-                        <!-- <i class="fa-solid fa-paper-plane boldplane"></i> -->
+                        <i class="fa-solid fa-paper-plane boldplane"></i>
+                       
                     </div>
                 </div>
             </div>
         </swiper-slide>
-        <swiper-slide>Slide 2</swiper-slide>
-        <swiper-slide>Slide 3</swiper-slide>
-        <swiper-slide>Slide 4</swiper-slide>
-        <swiper-slide>Slide 5</swiper-slide>
+        <swiper-slide>
+            <div class="frCard">
+                <div class="frName">KMY</div>
+                <div class="frImg">
+                    <img class="imgs" src="./뿌듯.png" alt="">
+                </div>
+                <div class="frBtn">
+                    <div class="Good">
+                       <span onclick="toggleHeart()"><i class="fa-regular fa-heart heart" ></i></span>
+                    </div>
+                    <div class="comment">
+                        <i class="fa-solid fa-paper-plane boldplane"></i>
+                    </div>
+                </div>
+            </div>
+        </swiper-slide>
+        <swiper-slide>
+            <div class="frCard">
+                <div class="frName">KMY</div>
+                <div class="frImg">
+                    <img class="imgs" src="./슬픔.png" alt="">
+                </div>
+                <div class="frBtn">
+                    <div class="Good">
+                       <span onclick="toggleHeart()"><i class="fa-regular fa-heart heart" ></i></span>
+                    </div>
+                    <div class="comment">
+                        <i class="fa-solid fa-paper-plane boldplane"></i>
+                    </div>
+                </div>
+            </div>
+        </swiper-slide>
+        <swiper-slide>
+            <div class="frCard">
+                <div class="frName">KMY</div>
+                <div class="frImg">
+                    <img class="imgs" src="./행복.png" alt="">
+                </div>
+                <div class="frBtn">
+                    <div class="Good">
+                       <span onclick="toggleHeart()"><i class="fa-regular fa-heart heart" ></i></span>
+                    </div>
+                    <div class="comment">
+                        <i class="fa-solid fa-paper-plane boldplane"></i>
+                    </div>
+                </div>
+            </div>
+        </swiper-slide>
+        <swiper-slide>  <div class="frCard">
+            <div class="frName">KMY</div>
+            <div class="frImg">
+                <img class="imgs" src="./화남.png" alt="">
+            </div>
+            <div class="frBtn">
+                <div class="Good">
+                   <span onclick="toggleHeart()"><i class="fa-regular fa-heart heart" ></i></span>
+                </div>
+                <div class="comment">
+                    <i id="show" class="fa-solid fa-paper-plane boldplane"></i>
+                </div>
+            </div>
+        </div>
+        </swiper-slide>
    
       </swiper-container>
 
@@ -54,7 +112,34 @@
       <!-- Slider main container -->
     </div>
    
+    <!-- Modal -->
 
     
+    <div class="background">
+      <div class="window">
+        <div class="popup">
+          <button id="close">팝업닫기</button>
+        </div>
+        <div>
+          <div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <script>
+ //modal
+
+ function show() {
+    document.querySelector(".background").className = "background show";
+  }
+
+  function close() {
+    document.querySelector(".background").className = "background";
+  }
+
+  document.querySelector("#show").addEventListener("click", show);
+  document.getElementById("close").addEventListener("click", close);
+  </script>
 </body>
 </html>
