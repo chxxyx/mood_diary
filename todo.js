@@ -67,7 +67,7 @@ buildCalendar();
 const todoInputElem = document.querySelector('.todo-input');
 const todoListElem = document.querySelector('.todo-list');
 const completeAllBtnElem = document.querySelector('.complete-all-btn');
-const leftItemsElem = document.querySelector('.left-items')
+const leftItemsElem = document.querySelector('.left_items'); //
 const showAllBtnElem = document.querySelector('.show-all-btn');
 const showActiveBtnElem = document.querySelector('.show-active-btn');
 const showCompletedBtnElem = document.querySelector('.show-completed-btn');
@@ -100,8 +100,10 @@ const getActiveTodos = () => {
 
 const setLeftItems = () => {
     const leftTodos = getActiveTodos()
-    leftItemsElem.innerHTML = `${leftTodos.length} items left` //남은 아이템 갯수를 가져옴    
+    leftItemsElem.innerHTML = `${leftTodos.length} items left` //남은 아이템 갯수를 가져옴   
+    console.log (leftItemsElem.innerHTML );
 }
+//
 
 
 
@@ -139,7 +141,7 @@ const onClickCompleteAll = () => {
 }
 
 const appendTodos = (text) => {
-    const newId = id + 1; // 기존에 i++ 로 작성했던 부분을 setId()를 통해 id값을 갱신하였다.
+    const newId = id + 1; // 기존에 i++ 로 작성했던 부분을 setId()를 통해 id값을 갱신
     setId(newId)
     const newTodos = getAllTodos().concat({id: newId, isCompleted: false, content: text })
     // const newTodos = [...getAllTodos(), {id: newId, isCompleted: false, content: text }]
@@ -149,7 +151,7 @@ const appendTodos = (text) => {
     paintTodos();
 }
 
-const deleteTodo = (todoId) => {
+const deleteTodo = (todoId) => {setTodos
     const newTodos = getAllTodos().filter(todo => todo.id !== todoId );
     setTodos(newTodos);
     setLeftItems()
@@ -282,6 +284,7 @@ const init = () => {
     clearCompletedBtnElem.addEventListener('click', clearCompletedTodos);
     setLeftItems()
 }
+
 
 init()
 

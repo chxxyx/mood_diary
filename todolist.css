@@ -50,7 +50,9 @@ body {
 
 /* cal */
 
-
+td:hover {
+    background-color: lightblue;
+}
 .title {
     display: flex;
     justify-content: space-around;
@@ -170,7 +172,7 @@ button {
     font-size: 1.2rem;
     
 }
-.complete-all-btn.checked {
+.complete-all-btn .checked {
     color: green
 }
 
