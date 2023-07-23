@@ -37,6 +37,11 @@ document.getElementById("date2").innerHTML=date2
      clickedhearts.classList.toggle("heart");
      clickedhearts.classList.toggle("redHeart");
  }
+ 
+ 
+    // let checkboxthis = document.getElementsByClassName("fa-circle-check")
+    // checkboxthis.classList.toggle("ani");
+ 
 
  //textarea
  

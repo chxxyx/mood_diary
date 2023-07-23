@@ -14,9 +14,14 @@
     <script src="https://kit.fontawesome.com/3dd417ebad.js" crossorigin="anonymous"></script>
     <!-- 스와이퍼 -->
     <link  rel="stylesheet"  href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
-    
+    <!-- jquery UI -->
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js" integrity="sha256-lSjKY0/srUM9BE3dPm+c4fBo1dky2v27Gdjm2uoZaL0=" crossorigin="anonymous"></script>
 </head>
 <body>
+    <div class="checkParents">
+    <i class="fa-regular fa-circle-check"></i>
+</div>
+
     <div class="nav123" style="background-color: pink; height: 40px; width: 100%;"></div>
     <div class="friends">Friends</div>
     <div id = "date2"></div>
@@ -120,11 +125,15 @@
             <div class="modalDiv">
                 
                 <i class="fa-solid fa-xmark close"></i>
-                <i class="fa-solid fa-envelope"></i>
-                <header>댓글 남기기</header>
+                
+                
                 <textarea name="comment" 
-                maxlength="150" class="comment" placeholder="친구에게 댓글 남기기"></textarea>
+                maxlength="170" class="comment" placeholder="친구에게 댓글 남기기"></textarea>
                 <hr />
+                <!-- <button type="button" class="send">작성하기</button> -->
+                <div class="circle">
+                    <i class="fa-solid fa-paper-plane modalBoldPlane"></i>
+                </div>
             </div>
         </div>
         <div>
@@ -152,6 +161,17 @@
   document.getElementById("happy").addEventListener("click", show);
   document.getElementById("angry").addEventListener("click", show);
   document.querySelector(".close").addEventListener("click", close);
+  document.querySelector(".circle").addEventListener("click", close);
+  
+ 
+
+  $(".circle").on("click",function() {
+        $(".fa-circle-check").addClass("ani");
+    })
+    $(".boldplane").on("click",function(){
+    $(".fa-circle-check").removeClass("ani");
+  })
+  
   </script>
 </body>
 </html>
