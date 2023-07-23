@@ -16,6 +16,10 @@
     <link  rel="stylesheet"  href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
     <!-- jquery UI -->
     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js" integrity="sha256-lSjKY0/srUM9BE3dPm+c4fBo1dky2v27Gdjm2uoZaL0=" crossorigin="anonymous"></script>
+    <script>
+        let heartCount=255;
+       let commentCount= 0;
+    </script>
 </head>
 <body>
     <div class="checkParents">
@@ -24,9 +28,45 @@
 
     <div class="nav123" style="background-color: pink; height: 40px; width: 100%;"></div>
     <div class="friends">Friends</div>
-    <div id = "date2"></div>
+    
     <div class="main1">
-    <div class="box1"></div>
+    <div class="box1">
+        <span id = "date2"></span>
+        <div class="myTop">
+            <div class="status">
+                <span class="myName">내이름</span>
+                <span class="myMoodText">어제 내 기분</span>
+            </div>
+            <hr class="imgHr" />
+            <img class="myMoodImg" src="./화남.png" alt=""/>
+            <hr />
+        </div>    
+        <div class="myBot">
+            <div class="myLike">
+                <i class="fa-regular fa-heart redHeart2" ></i>
+                <span id="count1">255
+                </span>
+                <i class="fa-regular fa-comment"></i>
+                <span class="counta2">0</span>
+            </div>
+            <div class="myComment">
+               
+                
+            </div>
+           
+        </div>
+       
+
+
+
+
+
+
+
+
+
+
+    </div>
    <!-- Slider main container -->
     <swiper-container class="mySwiper" effect="cards" grab-cursor="true">
         <swiper-slide>
@@ -37,7 +77,7 @@
                 </div>
                 <div class="frBtn">
                     <div class="Good">
-                       <span onclick="toggleHeart()"><i class="fa-regular fa-heart heart" ></i></span>
+                       <span onclick="toggleHeart()"><i  class="fa-regular fa-heart heart" ></i></span>
                     </div>
                     <div id="pleasure" class="comment">
                         <i class="fa-solid fa-paper-plane boldplane"></i>
@@ -94,13 +134,13 @@
             </div>
         </swiper-slide>
         <swiper-slide>  <div class="frCard">
-            <div class="frName">Friend5</div>
+            <div class="frName">Me</div>
             <div class="frImg">
                 <img class="imgs" src="./화남.png" alt="">
             </div>
             <div class="frBtn">
                 <div class="Good">
-                   <span onclick="toggleHeart()"><i class="fa-regular fa-heart heart" ></i></span>
+                   <span onclick="toggleHeart()"><i id="myHeart" class="fa-regular fa-heart heart" ></i></span>
                 </div>
                 <div id="angry" class="comment">
                     <i class="fa-solid fa-paper-plane boldplane"></i>
@@ -127,8 +167,8 @@
                 <i class="fa-solid fa-xmark close"></i>
                 
                 
-                <textarea name="comment" 
-                maxlength="170" class="comment" placeholder="친구에게 댓글 남기기"></textarea>
+                <textarea name="comment" id="comment" 
+                maxlength="45" class="comment" placeholder="친구에게 댓글 남기기"></textarea>
                 <hr />
                 <!-- <button type="button" class="send">작성하기</button> -->
                 <div class="circle">
@@ -148,11 +188,12 @@
 
  function show() {
     document.querySelector(".background").className = "background show";
+    document.querySelector(".modalDiv>.comment").value=""
   }
 
   function close() {
     document.querySelector(".background").className = "background";
-    document.querySelector(".modalDiv>.comment").value=""
+    
   }
 //modal호출
   document.getElementById("pleasure").addEventListener("click", show);
@@ -167,10 +208,36 @@
 
   $(".circle").on("click",function() {
         $(".fa-circle-check").addClass("ani");
+        console.log($("#comment").val())
     })
     $(".boldplane").on("click",function(){
     $(".fa-circle-check").removeClass("ani");
   })
+
+  $("#myHeart.heart").on("click",function() {
+    if($("#myHeart").hasClass("heart")) {
+        heartCount--;
+    } else {
+        heartCount++;
+    }
+    $("#count1").text(heartCount);
+    });
+    
+    
+   
+   
+   $(".circle").on("click",function(){
+    let profileCmt = $("#comment").val();
+   test2=`<table><th>홍길동</th><td class='counta'>${profileCmt}</td></table><hr class="commentHr" />`
+    $(".myComment").prepend(test2)
+    $(".counta2").text( $(".counta").length);
+   });
+   let test2 ="<div><table><th>친구 2</th><td class='counta'>댓글을 남겼습니다.</td></table><hr class='commentHr'/><table><th>친구 1</th><td class='counta'>댓글을 남겼습니다.</td></table></div>";
+   $(".myComment").prepend(test2);
+       $(".counta").length;
+       $(".counta2").text( $(".counta").length);
+  
+
   
   </script>
 </body>

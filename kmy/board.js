@@ -23,7 +23,7 @@ document.getElementById("date2").innerHTML=date2
 // }
 
  // 모든 div 요소에 대해 이벤트 리스너를 등록
- let hearts = document.querySelectorAll(".fa-heart");
+ let hearts = document.querySelectorAll(".heart, .redHeart");
  hearts.forEach(function(i) {
      i.addEventListener("click", toggleHeart);
  });
@@ -36,6 +36,8 @@ document.getElementById("date2").innerHTML=date2
     //  clickedhearts.classList.toggle("fa-heart");
      clickedhearts.classList.toggle("heart");
      clickedhearts.classList.toggle("redHeart");
+     
+    
  }
  
  
