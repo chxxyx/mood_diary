@@ -26,10 +26,15 @@ body {
 }
 
 .navbar-brand #logo{
-  margin-left: 5%;
+  margin-left: 0;
   width: auto;
-  height: 30px;
+  height: 40px;
 }
+
+.navbar-brand {
+  padding: 0;
+}
+
 /* Claendar */
 
 section {
@@ -115,6 +120,7 @@ tbody td:hover {    /* hover 시 애니메이션 */
     width: 500px;
     height: 500px;
     padding: 30px 30px;
+    bottom: 8%;
     margin: 0 auto;
     border: 1px solid rgb(205, 205, 205, 0.4);
     background-color: white;
@@ -185,6 +191,10 @@ tbody td:hover {    /* hover 시 애니메이션 */
         cursor: pointer;
         /* color: darkgrey; */
       }
+      #closeBtn {
+        position: absolute;
+        right: 5%;
+      }
     
 /* 일기 작성 모달 */
 
@@ -192,6 +202,7 @@ tbody td:hover {    /* hover 시 애니메이션 */
     position: relative;
     width: 800px;
     height: 500px;
+    bottom: 15%;
     padding: 30px 30px;
     margin: 0 auto;
     border: 2px solid black;
@@ -224,15 +235,18 @@ tbody td:hover {    /* hover 시 애니메이션 */
   }
 
   .in-modal-imoticon {
-    width: 170px;
-    height: 170px;
+    width: 180px;
+    height: 180px;
   }
 
   .modal-date {
     position: absolute;
-    right: 10%;
-    font-size: 50px;
+    /* left: 32%; */
+    left: 35%;
+    top: 3%;
+    font-size: 70px;
     font-weight: 500;
+    color: rgb(77, 77, 77);
   }
   
   /* 제목 */
@@ -294,10 +308,10 @@ tbody td:hover {    /* hover 시 애니메이션 */
   .contents img {
     position: absolute;
     left: 50%;
-    top: 60%;
-    transform: translate(-50%, -60%);
-    width: 60px;
-    height: 60px;
+    top: 70%;
+    transform: translate(-50%, -70%);
+    width: 50px;
+    height: 50px;
   }
 
   /* 반응형 */
@@ -314,13 +328,22 @@ tbody td:hover {    /* hover 시 애니메이션 */
       position: relative;
       width: 400px;
       height: 400px;
+      top: 5%;
+  }
+}
+@media screen and (max-width: 768px){
+  #modalBody img {
+    position: relative;
+    width: 80px;
+    height: 80px;
   }
 }
 @media screen and (max-width: 768px){
   #modalBody-2 {
       position: absolute;
       left: 20%;
-      top: 10%;
+      top: 12%;
+
       width: 300px;
       height: 600px;
   }
@@ -359,12 +382,41 @@ tbody td:hover {    /* hover 시 애니메이션 */
     position: relative;
     width: 250px;
     left: 10px;
+    
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .input-title:focus ~ .input-span, .input-title:valid ~ .input-span {
+    width: 260px;
   }
 }
 
 @media screen and (max-width: 768px){
   .modal-date {
     position: absolute;
+    top: 3%;
+    left: 10%;
+    font-size: 40px;
+  }
+}
+
+@media screen and (max-width: 768px){
+  #closeBtn {
+    position: absolute;
+    right: 5%;
     top: 2%;
+    font-size: 30px;
+  }
+}
+
+@media screen and (max-widht: 768px){
+  .contents img {
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    transform: translate(-50%, -70%);
+    width: 40px;
+    height: 40px;
   }
 }
