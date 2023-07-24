@@ -75,9 +75,10 @@ buildCalendar();
 
 // 모달 
 const closeBtn = document.getElementById('line-box');
+const modalCloseBtn = document.getElementById('closeBtn');
 const modal = document.getElementById('modalWrap');
 const thead = document.getElementsByTagName('thead');
-console.log();
+
 let selectDt;
 let selectDay;
 
@@ -91,10 +92,10 @@ $("td").click(function() {
 })
 
 console.log($(selectDt).children('.date').text());
+
 closeBtn.onclick = function() {
     modal.style.display = 'none';
 }
-
 
 const pleasureBtn = document.getElementById('pleasure');
 const sadBtn = document.getElementById('sad');
@@ -103,82 +104,97 @@ const angryBtn = document.getElementById('angry');
 const proudBtn = document.getElementById('proud');
 const writeModal = document.getElementById('modalWrap-2');
 
-
-
 // 기쁨 이모티콘 눌렀을 때 작성 모달 
-pleasureBtn.onclick = function() {
-    modal.style.display = 'none'; // 처음 이모지 모달은 없애기
-
-    writeModal.style.display = 'block'; // 작성 모달
-    $('#img-box').append(`<img class="in-modal-imoticon" src="./기쁨.png" />`);
-    $('#modal-date').append(`<div class="select-dt">${textDt}</div>`);
-    setImg("pleasure");
-}
+    pleasureBtn.onclick = function() {
+        modal.style.display = 'none'; // 처음 이모지 모달은 없애기
+        writeModal.style.display = 'block'; // 작성 모달
+        $('#img-box').append(`<img class="in-modal-imoticon" src="../img/기쁨.png" />`);
+        $('#modal-date').append(`<div class="select-dt">${textDt}</div>`);
+        setImg("pleasure");
+    }
 
 
 // 슬픔 이모티콘
-sadBtn.onclick = function() {
-    modal.style.display = 'none';
-    writeModal.style.display = 'block';
-    $('#img-box').append(`<img class="in-modal-imoticon" src="./슬픔.png" />`);
-    $('#modal-date').append(`<div class="select-dt">${textDt}</div>`);
-    setImg("sad");
-}
+    sadBtn.onclick = function() {
+        modal.style.display = 'none';
+        writeModal.style.display = 'block';
+        $('#img-box').append(`<img class="in-modal-imoticon" src="../img/슬픔.png" />`);
+        $('#modal-date').append(`<div class="select-dt">${textDt}</div>`);
+        setImg("sad");
+    }
 
 // 행복 이모티콘
-happyBtn.onclick = function() {
-    modal.style.display = 'none';;
-    writeModal.style.display = 'block';
-    $('#img-box').append(`<img class="in-modal-imoticon" src="./행복.png" />`);
-    $('#modal-date').append(`<div class="select-dt">${textDt}</div>`);
-    setImg("happy");
-}
+    happyBtn.onclick = function() {
+        modal.style.display = 'none';;
+        writeModal.style.display = 'block';
+        $('#img-box').append(`<img class="in-modal-imoticon" src="../img/행복.png" />`);
+        $('#modal-date').append(`<div class="select-dt">${textDt}</div>`);
+        setImg("happy");
+    }
 
 // 화남 이모티콘
-angryBtn.onclick = function() {
-    modal.style.display = 'none';
-    writeModal.style.display = 'block';
-    $('#img-box').append(`<img class="in-modal-imoticon" src="./화남.png" />`);
-    $('#modal-date').append(`<div class="select-dt">${textDt}</div>`);
-    setImg("angry");
-}
+    angryBtn.onclick = function() {
+        modal.style.display = 'none';
+        writeModal.style.display = 'block';
+        $('#img-box').append(`<img class="in-modal-imoticon" src="../img/화남.png" />`);
+        $('#modal-date').append(`<div class="select-dt">${textDt}</div>`);
+        setImg("angry");
+    }
 
 // 뿌듯 이모티콘
-proudBtn.onclick = function() {
-    modal.style.display = 'none';
-    writeModal.style.display = 'block';
-    $('#img-box').append(`<img class="in-modal-imoticon" src="./뿌듯.png" />`);
-    $('#modal-date').append(`<div class="select-dt">${textDt}</div>`);
-    setImg("proud");
-}
+    proudBtn.onclick = function() {
+        modal.style.display = 'none';
+        writeModal.style.display = 'block';
+        $('#img-box').append(`<img class="in-modal-imoticon" src="../img/뿌듯.png" />`);
+        $('#modal-date').append(`<div class="select-dt">${textDt}</div>`);
+        setImg("proud");
+    }
+
+
+    $(".diary-box").keydown(function(e) { // 누르는 순간
+        if (e.keyCode === 13) {
+            writeModal.style.display = "none";
+            let imgBox = document.getElementById('img-box');
+            let inImg = document.querySelector('.in-modal-imoticon');
+            let modalDt = document.getElementById('modal-date');
+            let selDt = document.querySelector('.select-dt');
+
+            modalDt.removeChild(selDt);
+            imgBox.removeChild(inImg);
+            $(".input-title").val("");
+            $(".diary-box").val("");
+
+        }
+    })
 
 
 
-window.onclick = function(event) {
-    if (event.target == writeModal) {
+    function setImg(img) {
+        if(img == "pleasure") {
+            $(selectDt).children('.contents').append(`<img class="modal-img" src="../img/기쁨.png" />`);
+        } else if (img == "sad") {
+            $(selectDt).children('.contents').append(`<img class="modal-img" src="../img/슬픔.png" />`);
+        } else if (img == "happy") {
+            $(selectDt).children('.contents').append(`<img class="modal-img" src="../img/행복.png" />`);
+        } else if (img == "angry") {
+            $(selectDt).children('.contents').append(`<img class="modal-img" src="../img/화남.png" />`);
+        } else if (img == "proud") {
+            $(selectDt).children('.contents').append(`<img class="modal-img" src="../img/뿌듯.png" />`);
+        } 
+    }
+
+    $("#closeBtn").click(function() {
+        $(selectDt).children('.contents').empty();
+        writeModal.style.display = 'none';
+
         let imgBox = document.getElementById('img-box');
         let inImg = document.querySelector('.in-modal-imoticon');
         let modalDt = document.getElementById('modal-date');
         let selDt = document.querySelector('.select-dt');
-
-        writeModal.style.display = "none";
- 
+        
         modalDt.removeChild(selDt);
         imgBox.removeChild(inImg);
-    }
+        $(".input-title").val("");
+        $(".diary-box").val("");
+    })
     
-}
-
-function setImg(img) {
-    if(img == "pleasure") {
-        $(selectDt).children('.contents').append(`<img src="./기쁨.png" />`);
-    } else if (img == "sad") {
-        $(selectDt).children('.contents').append(`<img src="./슬픔.png" />`);
-    } else if (img == "happy") {
-        $(selectDt).children('.contents').append(`<img src="./행복.png" />`);
-    } else if (img == "angry") {
-        $(selectDt).children('.contents').append(`<img src="./화남.png" />`);
-    } else if (img == "proud") {
-        $(selectDt).children('.contents').append(`<img src="./뿌듯.png" />`);
-    } 
-}

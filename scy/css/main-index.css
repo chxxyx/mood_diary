@@ -1,15 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Ysabeau+Office:wght@400;500;600;700;800;900;1000&display=swap');
+
 
 * {
     padding:0;
     margin:0;
     box-sizing: border-box;
+    font-family: 'Ysabeau Office', sans-serif;
   }
 
 body {
     background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAAXNSR0IArs4c6QAAABhJREFUKFNjZMAD3l257ss4PBSAvILPJwAPGRc57aMbnwAAAABJRU5ErkJggg==) repeat;
     min-width: 770px;
 }
+
+
+.navbar{
+    font-family: 'Ysabeau Office', sans-serif;
+    background-color: #efd3d7 !important;
+}
+
+.offcanvas-header{
+    background-color: #CBC0D3;
+}
+.offcanvas-body{
+    background-color: #cbc0d39a;
+}
+
+.navbar-brand #logo{
+  margin-left: 0;
+  width: auto;
+  height: 40px;
+}
+
+.navbar-brand {
+  padding: 0;
+}
+
 /* Claendar */
+
+section {
+  width: 70%;
+  height: 90%;
+  margin-bottom: 30px;
+  position: absolute;
+  left: 50%;
+  top: 60%;
+  transform: translate(-50%, -50%);
+}
 .title {
     display: flex;
     justify-content: space-around;
@@ -54,16 +91,6 @@ tbody td:hover {    /* hover 시 애니메이션 */
     opacity: 0.7;
 }
 
-section {
-    width: 70%;
-    height: 90%;
-    margin-bottom: 30px;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-}
-
 .date {
     height: 15px;
     margin-bottom: 5px;
@@ -72,15 +99,6 @@ section {
 .contents {
     height: 70px;
     padding: 5px;
-}
-
-/* 반응형 */
-/* 캘린더 섹션 */
-@media screen and (max-width: 768px){
-    section {
-        width: 100%;
-        height: 100%;
-    }
 }
 
 /*  모달 css */
@@ -103,6 +121,7 @@ section {
     width: 500px;
     height: 500px;
     padding: 30px 30px;
+    bottom: 8%;
     margin: 0 auto;
     border: 1px solid rgb(205, 205, 205, 0.4);
     background-color: white;
@@ -110,19 +129,6 @@ section {
     text-align: center;
 
   }
-    @media screen and (max-width: 768px){
-        #modalBody {
-            position: relative;
-            width: 400px;
-            height: 400px;
-        }
-    }
-    @media screen and (max-width: 768px){
-        #modalBody-2 {
-            width: 60%;
-            height: 30%;
-        }
-    }
 
     .imoticon {
         display: inline-block;
@@ -186,14 +192,18 @@ section {
         cursor: pointer;
         /* color: darkgrey; */
       }
+      #closeBtn {
+        position: absolute;
+        right: 5%;
+      }
     
 /* 일기 작성 모달 */
 
-  
   #modalBody-2 {
     position: relative;
     width: 800px;
     height: 500px;
+    bottom: 15%;
     padding: 30px 30px;
     margin: 0 auto;
     border: 2px solid black;
@@ -226,15 +236,18 @@ section {
   }
 
   .in-modal-imoticon {
-    width: 170px;
-    height: 170px;
+    width: 180px;
+    height: 180px;
   }
 
   .modal-date {
     position: absolute;
-    right: 10%;
-    font-size: 50px;
+    /* left: 32%; */
+    left: 35%;
+    top: 3%;
+    font-size: 70px;
     font-weight: 500;
+    color: rgb(77, 77, 77);
   }
   
   /* 제목 */
@@ -293,17 +306,118 @@ section {
     width: 100%;
   }
 
-  /* td .contents{
-    position: relative;
-    background-color: aqua;
-  } */
-  /* 작성 후 캘린더에 추가되는 이모티콘 */
-
   .contents img {
     position: absolute;
     left: 50%;
-    top: 60%;
-    transform: translate(-50%, -60%);
-    width: 60px;
-    height: 60px;
+    top: 70%;
+    transform: translate(-50%, -70%);
+    width: 50px;
+    height: 50px;
   }
+
+  /* 반응형 */
+/* 캘린더 섹션 */
+@media screen and (max-width: 768px){
+  section {
+      width: 100%;
+      height: 100%;
+  }
+}
+
+@media screen and (max-width: 768px){
+  #modalBody {
+      position: relative;
+      width: 400px;
+      height: 400px;
+      top: 5%;
+  }
+}
+@media screen and (max-width: 768px){
+  #modalBody img {
+    position: relative;
+    width: 80px;
+    height: 80px;
+  }
+}
+@media screen and (max-width: 768px){
+  #modalBody-2 {
+      position: absolute;
+      left: 20%;
+      top: 12%;
+
+      width: 300px;
+      height: 600px;
+  }
+}
+@media screen and (max-width: 768px){
+  .in-modal-imoticon {
+      width: 160px;
+      height: 150px;
+      position: absolute;
+      left: 30%;
+      top: 0;
+  }
+}
+
+@media screen and (max-width: 768px){
+  .diary-box {
+      width: 90%;
+      height: 45%;
+      position: absolute;
+      left: 5%;
+      top: 52%;
+  }
+}
+
+@media screen and (max-width: 768px){
+  .modal-input-title {
+    position: absolute;
+    width: 10%;
+    left: 5%;
+    top: 40%;
+  }
+}
+
+@media screen and (max-width: 768px){
+  .input-title {
+    position: relative;
+    width: 250px;
+    left: 10px;
+    
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .input-title:focus ~ .input-span, .input-title:valid ~ .input-span {
+    width: 260px;
+  }
+}
+
+@media screen and (max-width: 768px){
+  .modal-date {
+    position: absolute;
+    top: 3%;
+    left: 10%;
+    font-size: 40px;
+  }
+}
+
+@media screen and (max-width: 768px){
+  #closeBtn {
+    position: absolute;
+    right: 5%;
+    top: 2%;
+    font-size: 30px;
+  }
+}
+
+@media screen and (max-widht: 768px){
+  .contents img {
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    transform: translate(-50%, -70%);
+    width: 40px;
+    height: 40px;
+  }
+}
