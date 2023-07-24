@@ -1,0 +1,17 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Ysabeau+Office:wght@400;500;600;700;800;900;1000&display=swap');
+/* font-family: 'Ysabeau Office', sans-serif; */
+/* weight: 400;500;600;700;800;900 */
+
+
+.navbar{
+    font-family: 'Ysabeau Office', sans-serif;
+    background-color: #efd3d7 !important;
+}
+
+.offcanvas-header{
+    background-color: #CBC0D3;
+}
+.offcanvas-body{
+    background-color: #cbc0d39a;
+}
