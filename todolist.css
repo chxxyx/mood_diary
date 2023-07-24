@@ -1,3 +1,9 @@
+/* nav */
+@import url('https://fonts.googleapis.com/css2?family=Ysabeau+Office:wght@400;500;600;700;800;900;1000&display=swap');
+/* font-family: 'Ysabeau Office', sans-serif; */
+/* weight: 400;500;600;700;800;900 */
+
+
 html {
 	height: 100%;
 }
@@ -7,12 +13,9 @@ body {
     justify-content: center;
     background :url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAAXNSR0IArs4c6QAAABhJREFUKFNjZMAD3l257ss4PBSAvILPJwAPGRc57aMbnwAAAABJRU5ErkJggg==) repeat;
     min-height: 100%;
+    font-family: 'Ysabeau Office', sans-serif;
 }
 
-/* nav */
-@import url('https://fonts.googleapis.com/css2?family=Ysabeau+Office:wght@400;500;600;700;800;900;1000&display=swap');
-/* font-family: 'Ysabeau Office', sans-serif; */
-/* weight: 400;500;600;700;800;900 */
 
 
 .navbar{
@@ -28,14 +31,15 @@ body {
 
 }
 .navbar-brand{
-    display: flex;
+    
+    padding: 0;
 }
 
 
 .navbar-brand #logo{
     margin-left: 5%;
     width: auto;
-    height: 30px;
+    height: 40px;
 }
 .mainlogo{
     margin-right: 10px;
@@ -50,7 +54,8 @@ body {
 
 /* cal */
 
-td:hover {
+td:active {
+    
     background-color: lightblue;
 }
 .title {
@@ -78,6 +83,15 @@ tbody td {
     transform: scale(1.0); /* 이미지 확대 */
     transition: transform .5s; /* 시간 설정 */
 } 
+.yk{
+    width: 30px;
+    height: 30px;
+    justify-items: center;
+    margin-left: 25%;
+    background-color: gray;
+    color: white;
+    border-radius: 50%;
+}
 
 .calendar {
     text-align: center;
@@ -96,14 +110,28 @@ section {
 }
 
 .date {
+    position: absolute;
+    top: 0%;
+    text-align: center;
     height: 15px;
-    margin-bottom: 5px;
+    margin-bottom: 0px;
+    
 }
 
 .contents {
-    height: 70px;
-    padding: 5px;
-}
+    /* height: 70px;
+    padding: 5px; */
+    display: flex;
+     flex-wrap: wrap;
+     overflow: scroll;
+     width: 65px;
+     height: 65px;
+     padding: 10px;
+     margin: 0;
+ }
+
+
+
 .largestbox{
     /* float: left; */
     display: flex;
@@ -124,6 +152,7 @@ section {
 }
 
 .todo-wrapper {
+    
     margin: 0 auto;
     width: 500px;
     justify-content: center;
@@ -134,7 +163,7 @@ section {
 .todo-title {
     padding: 2rem;
     text-align: center;
-    color: #8E9AAF;
+    color: #5A5A5A;
     font-size: 5rem;
 }
 
@@ -176,6 +205,10 @@ button {
     color: green
 }
 
+.aza :hover{
+    background-color: #CBC0D3;
+}
+
 
 
 
@@ -186,7 +219,7 @@ button {
     text-align: center;
     border: 0;
     outline: none;
-    font-size: 1.3rem;
+    font-size: 20px;
 }
 
 .todo-item {
@@ -292,15 +325,15 @@ p.info {
     text-align: center;
     color: #8E9AAF;
 }
-.complete-all-btn:hover{
-    box-shadow: 200px 0 0 0 #DEE2FF inset, 
-    -200px 0 0 0 #8E9AAF inset;;
+
+.aza{
+    margin-left: 75%;
+    height:auto;
+    width: 150px;
+
 }
-.active-button:hover{
-    box-shadow: 200px 0 0 0 #DEE2FF inset, 
-    -200px 0 0 0 #8E9AAF inset;;
+.aza:hover{
+    text-decoration: underline;
+    cursor: pointer;
 }
-.completed-button:hover{
-    box-shadow: 200px 0 0 0 #DEE2FF inset, 
-    -200px 0 0 0 #8E9AAF inset;;
-}
+

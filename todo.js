@@ -140,6 +140,10 @@ const onClickCompleteAll = () => {
     setLeftItems()
 }
 
+
+
+
+
 const appendTodos = (text) => {
     const newId = id + 1; // 기존에 i++ 로 작성했던 부분을 setId()를 통해 id값을 갱신
     setId(newId)
@@ -277,6 +281,7 @@ const init = () => {
             appendTodos(e.target.value); todoInputElem.value ='';
         }
     })
+    
     completeAllBtnElem.addEventListener('click',  onClickCompleteAll);
     showAllBtnElem.addEventListener('click', onClickShowTodosType);
     showActiveBtnElem.addEventListener('click',onClickShowTodosType);

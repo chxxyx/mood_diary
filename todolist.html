@@ -23,11 +23,7 @@
        <nav class="navbar bg-body-tertiary fixed-top" >
         <div class="container-fluid" >
           <a class="navbar-brand" href="#" >
-            <img  id="logo" class="mainlogo" src="./logo.png" alt="">
-            M
-            <img id="logo" src="./logo1.png" alt="">
-            <img id="logo"  src="./logo2.png" alt="">
-            D
+            <img  id="logo" class="mainlogo" src="./longlogo.png" alt="">
         </a>
           <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -96,23 +92,25 @@
    </div>  
 
 
-
-
-
+   
 
    
     <div class="mycontainer">
       <section>
+        
 
       
       <div class="todo-wrapper">
-        <div class="todo-title">To Do List</div>
+        
+        <div class="todo-title">To Do List</div> 
+        <button class="aza">insert calender</button>
         <div class="todo-box">
+          
 
             <div class="todo-input-box">
                 <button class="complete-all-btn">✔</button>
                 <input type="text" class="todo-input" placeholder="해야 할 일을 입력해주세요.">
-                <button class="aza">aza</button>
+                
             </div>
             
             <ul class="todo-list">
@@ -185,34 +183,35 @@
 
 
 <script>
-    let textDt = "";
-      $("td").click(function() {
-          console.log($(this).children('.date').text());
-          textDt = this;
-    })
-      $(".aze").on("click", function() {
-        let indexContent = todos.indexOf(this).text();
-        $(textDt).children('.contents').text(indexContent);
-
-    })
-
-
-      // let td = null;
-      //   $("td").on("click",function(e){
-      //     console.log(this)
-      //     td = this
-
-    // })//td값 가져오기
-
-    // $(".aza").on("click",function(){
-    //   // $(".contents").text(contents);
-    //   // $("tbody").children('.contents').text($(contents));
-    //   // $("tbody").children('.contents').text(contents);
-    //   // let contents = todos.indexOf(this).text();
-    //   // let contents=$("leftTodox.length").val()
-    //   // $(td).parent(`<div>${leftItemsElem.innerHTML}</div>`)
-    //   // console.log(leftItemsElem.innerHTML);
+    // let textDt = "";
+    //   $("td").click(function() {
+    //       console.log($(this).children('.date').text());
+    //       td = this;
     // })
+    //   $(".aze").on("click", function() {
+    //     let indexContent = todos.indexOf(this).text();
+    //     $(textDt).children('.contents').text(indexContent);
+
+    // })
+
+
+      let td = null;
+        $("td").on("click",function(e){
+          console.log(this)
+          td = this
+
+    })//td값 가져오기
+
+    $(".aza").on("click",function(){
+      let leftItems = $(".left_items").text().split(' ')[0]
+      console.log(leftItems)
+
+      $("#td").text(leftItems)
+      $(td).find('div').next().empty()
+      $(td).append (`<div class='yk'>${leftItems}</div>`)
+   
+      // $('.yk').css('border-','5px')
+    })
 
 
 
