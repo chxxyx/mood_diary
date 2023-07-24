@@ -1,0 +1,342 @@
+@import url('https://fonts.googleapis.com/css2?family=Ysabeau+Office:wght@400;500;600;700;800;900;1000&display=swap');
+
+/* font-family: 'Ysabeau Office', sans-serif; */
+body {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAAXNSR0IArs4c6QAAABhJREFUKFNjZMAD3l257ss4PBSAvILPJwAPGRc57aMbnwAAAABJRU5ErkJggg==) repeat;
+  color: rgb(77, 77, 77);
+  font-family: 'Ysabeau Office', sans-serif;
+}
+
+.navbar{
+  font-family: 'Ysabeau Office', sans-serif;
+  background-color: #efd3d7 !important;
+}
+
+.offcanvas-header{
+  background-color: #CBC0D3;
+}
+.offcanvas-body{
+  background-color: #cbc0d39a;
+
+}
+.navbar-brand{
+
+  padding: 0;
+}
+
+
+.navbar-brand #logo{
+  margin-left: 5%;
+  width: auto;
+  height: 40px;
+}
+.mainlogo{
+  margin-right: 10px;
+}
+.diary{
+  margin-top: 50px;
+}
+.title{
+  padding: 20px;
+  color: rgb(77, 77, 77);
+  font-size: 30px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.diary > .filters{
+  /* display: flex; */
+  /* flex-wrap: wrap; */
+  justify-content: center;
+}
+.diary > .filters > .monthSel{
+  display: flex;
+  font-size: 20px;
+  cursor:pointer;
+  justify-content: center;
+  
+}
+.diary > .filters > .monthSel > *{
+  padding: 1px 5px 1px 5px;
+  margin: 10px;
+  opacity: 0.7;
+}
+.diary > .filters > .monthSel > #monthMenu{
+  background-color: pink;
+  color: white !important;
+  padding: 1px 10px 1px 10px;
+  font-weight: bolder;
+  cursor: default;
+}
+.filters #all{
+  color:pink;
+}
+
+.filterList{
+  display: flex;
+  justify-content: center;
+}
+.filterList *{
+  margin: 10px;
+  font-size: 20px;
+  cursor:pointer;
+  opacity: 0.7;
+
+}
+
+#mood{
+  background-color: pink;
+  color: white !important;
+  padding: 1px 10px 1px 10px;
+  font-weight: bolder;
+  cursor: default;
+}
+.myContainer{
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 10%;
+  margin-right: 10%;
+  justify-content: center;
+}
+
+
+
+.item{
+  /* position: relative; */
+  display: grid;
+  padding: 20px;
+  width: 270px;
+  height: 330px;
+  background-color: #efd3d77f;
+  margin: 30px;
+  border: 1px solid #777777;
+  cursor:pointer;
+
+  grid-template-areas: 
+    "month date ."
+    " . img .  "
+    ". title .";
+}
+
+
+.item:hover{
+  animation: vibration 0.1s infinite ;
+  transform: scale(1.2);
+}
+
+/* 일기 카드 css */
+
+.diaryMonth{
+  grid-area: month;
+  font-size: 30px;
+  text-decoration: underline;
+  font-weight: bolder;
+  text-align: center;
+  align-self: center;
+}
+.diaryDate{
+  grid-area: date;
+  font-size: 20px;
+  align-self: center;
+  padding: 10px;
+}
+.emotion{
+  grid-area: img;
+  margin: 10px;
+  width: 150px;
+}
+.feeling{
+  grid-area: title;
+  font-size: 20px;
+  text-align: center;
+}
+
+
+/* 호버하면 vibration */
+@keyframes vibration {
+  from {
+    transform: rotate(1deg) scale(1.1);
+  }
+  to {
+    transform: rotate(-1deg) scale(1.1);
+  }
+}
+
+/* 모달팝업을 감싸고 있는 최상위 부모 */
+
+#modalWrap, #modalWrap-2 {
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 200px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  display: none;
+}
+
+#modalBody {
+    position: relative;
+    width: 800px;
+    height: 500px;
+    padding: 30px 30px;
+    margin: 0 auto;
+    border: 2px solid rgba(204, 191, 191, 0);
+    background-color: #fff;
+    text-align: center;
+  }
+
+.diary-box {
+    position: absolute;
+    left: 32%;
+    top: 50%;
+    width: 500px;
+    height: 200px;
+    font-size: 20px;
+    border: 0;
+    border-radius: 15px;
+    outline: none;
+    padding-left: 10px;
+    background-color: rgb(233, 233, 233);
+}
+#img-box {
+  display: inline-block;
+  position: absolute;
+  left: 3%;
+  top: 10%;
+  width: 200px;
+  height: 200px;
+}
+
+.in-modal-imoticon {
+  width: 170px;
+  height: 170px;
+}
+
+.modal-date {
+  position: absolute;
+  right: 10%;
+  font-size: 50px;
+  font-weight: 500;
+}
+
+/* 제목 */
+.modal-input-title {
+  position: absolute;
+  width: 300px;
+  left: 35%;
+  top: 30%;
+}
+
+.input-title {
+  font-size: 20px;
+  color: #222222;
+  width: 300px;
+  border: none;
+  border-bottom: solid #aaaaaa 1px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  position: relative;
+  background: none;
+  z-index: 5;
+}
+
+.input-title::placeholder { color: #aaaaaa; }
+.input-title:focus { outline: none; }
+
+.input-span {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0%;  /* right로만 바꿔주면 오 - 왼 */
+  background-color: #666;
+  width: 0;
+  height: 2px;
+  border-radius: 2px;
+  transition: 0.5s;
+}
+
+label {
+  position: absolute;
+  color: #aaa;
+  left: 10px;
+  font-size: 20px;
+  bottom: 8px;
+  transition: all .2s;
+}
+
+.input-title:focus ~ label, .input-title:valid ~ label {
+  font-size: 16px;
+  bottom: 40px;
+  color: #666;
+  font-weight: bold;
+}
+
+.input-title:focus ~ .input-span, .input-title:valid ~ .input-span {
+  width: 100%;
+}
+
+@media screen and (max-width: 768px){
+ 
+  #modalBody {
+      /* position: absolute;
+      left: 20%;
+      top: 12%; */
+      width: 300px;
+      height: 600px;
+  }
+  .in-modal-imoticon {
+      width: 160px;
+      height: 150px;
+      position: absolute;
+      left: 30%;
+      top: 0;
+  }
+
+  .diary-box {
+      width: 90%;
+      height: 45%;
+      position: absolute;
+      left: 5%;
+      top: 52%;
+  }
+
+  .modal-input-title {
+    position: absolute;
+    width: 10%;
+    left: 5%;
+    top: 40%;
+  }
+
+  .input-title {
+    position: relative;
+    width: 250px;
+    left: 10px;
+  }
+
+  .modal-date {
+    position: absolute;
+    top: 0;
+    left: 8%;
+  }
+}
+
+/* //닫기 버튼 */
+#closeBtn {
+  float:right;
+  font-weight: bold;
+  color: #777;
+  font-size:25px;
+  cursor: pointer;
+}
+
+.innerImg{
+  width: 10vw;
+}
+
+.innerText{
+  font-size: 1.5rem;
+}
+

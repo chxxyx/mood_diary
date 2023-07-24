@@ -1,0 +1,506 @@
+@import url('https://fonts.googleapis.com/css2?family=Ysabeau+Office:wght@400;500;600;700;800;900;1000&display=swap');
+
+body {
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAAXNSR0IArs4c6QAAABhJREFUKFNjZMAD3l257ss4PBSAvILPJwAPGRc57aMbnwAAAABJRU5ErkJggg==
+
+    );
+    font-family: 'Ysabeau Office', sans-serif;
+}
+
+/* nav--------------------- */
+
+.navbar{
+    font-family: 'Ysabeau Office', sans-serif;
+    background-color: #efd3d7 !important;
+}
+
+.offcanvas-header{
+    background-color: #CBC0D3;
+}
+.offcanvas-body{
+    background-color: #cbc0d39a;
+
+}
+.navbar-brand{
+
+    padding: 0;
+}
+
+
+.navbar-brand #logo{
+    margin-left: 5%;
+    width: auto;
+    height: 40px;
+}
+.mainlogo{
+    margin-right: 10px;
+}
+/* nav---------------------- */
+
+
+
+
+.friends {
+    position: relative;
+    top: 70px;
+    font-size: 30px;
+    text-align: center;
+}
+
+.main1{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-top: 50px;
+    margin-left: 60px;
+    padding: 0 100px 0 100px;
+    
+    
+}
+.frName{
+    /* text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000; */
+    position: relative;
+    top: 50px;
+}
+.frImg{
+    width: 250px;
+    height: 278px;
+}
+.imgsad{
+    margin-top: 95px;
+    
+    
+}
+
+/* 왼쪽 박스 ------------------- */
+.box1 {
+    position: relative;
+    width:  400px;
+    height: 480px;
+    background-color: #DEE2FF;
+    border-radius: 18px;
+    padding: 20px;
+    left: 3%;
+    top: 60px;
+    
+}
+#date2{
+    position: absolute;
+    left: 5%;
+    font-size: 25px;
+    top : -50px;
+    background-color: rgba(134, 114, 114, 0.468);
+    color: white;
+    font-weight: bold;
+    padding: 2px 10px 2px 10px;
+    border-radius: 5px;
+}
+.myTop {
+
+}
+.myName {
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #fff;
+}
+.myMoodText{
+    font-size: 20px;
+}
+.myTop>.myMoodImg {
+    position: relative;
+    width: 150px;
+    height: 128px;
+    left: 28%;
+}
+
+.myBot{
+    width: 360px;
+    height: 215px;
+    margin-top: 20px;
+    background-color: rgb(255,255,255,0.4);
+    border-radius: 5px;
+}
+.myLike{
+    padding: 8px;
+}
+.myComment {
+    overflow: auto;
+    margin: 0;
+    width: 350px;
+    height: 140px;
+    padding-left: 10px;
+    padding-right: 0px;
+}
+td {
+    text-align: left;
+    vertical-align: top;
+    word-break: break-all;
+    width: 330px;
+}
+th {
+    font-size: 14px;
+    width: 60px;
+    text-align: center;
+    vertical-align: top;
+}
+hr {
+    margin: 15px;
+}
+.imgHr{
+    margin: 5px;
+}
+.commentHr{
+    width: 306px;
+    margin: 9px;
+}
+.counta{
+    position: relative;
+    font-size: 14px;
+}
+.counta > .time {
+    position: absolute;
+    left: 240px;
+    bottom: -12px;
+    font-size: 10px;
+}
+
+
+/* -------------------------------- */
+/* 왼쪽 박스 icon ------------------ */
+.fa-comment {
+    margin-left: 10px;
+    font-size: 30px;
+}
+.redHeart2 {
+    color: rgb(244, 120, 120);
+    font-size: 30px;
+    
+}
+
+
+
+
+/* 친구카드css */
+
+.frCard{
+    width: 250px;
+    height: 508px ;
+}
+.frName{
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 10px;
+    
+}
+.frImg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+    margin-top: 30px;
+    padding-top: 10px;
+}
+.imgs{
+    display: flex;
+    width: 200px;
+    height: auto;
+
+    
+}
+.frBtn{
+  
+    display: flex;
+    justify-content: space-between;
+    margin-bottom : 20px;
+
+}
+
+/* FrCard icon --------------------- */
+
+.heart{
+    position: relative;
+    left: 20px;
+    top : -20px;
+    font-size: 50px;
+    rotate: -20deg;
+    
+}
+.heart:hover {
+    
+    cursor: pointer;
+    animation: heartColor 0.2s ease-in 1;
+    animation-fill-mode: forwards;
+    
+}
+
+
+.redHeart{
+    position: relative;
+    left: 20px;
+    top : -20px;
+    color: rgb(244, 120, 120);
+    font-size: 50px;
+    
+}
+.redHeart:hover {
+    cursor: pointer;
+    animation: scale 0.2s ease-in 1;
+    animation-fill-mode: forwards;
+    
+    
+    
+    /* animation: redHeartColor 0.2s ease-in 1;
+    animation-fill-mode: forwards; */
+}
+/* .plane {
+    position: relative;
+    font-size: 70px;
+    color: navy;
+    background-color: red;
+    
+}
+.plane:hover {
+    cursor: pointer;
+    animation: opacity1 1s ease-in 1;
+    animation-fill-mode: forwards;
+    
+} */
+.boldplane{
+    position: relative;
+    right: 20px;
+    top : -20px;
+    font-size: 50px;
+    color: white
+}
+.modalBoldPlane {
+    color: white;
+    font-size: 32px;
+    position: relative;
+    right: 2px;
+    
+}
+.boldplane:hover{
+    cursor: pointer;
+    animation: planeColor 0.2s ease-in 1;
+    animation-fill-mode: forwards;
+}
+@keyframes heartColor {
+    0%{transform: scale(1);}
+    100%{color: rgb(244, 120, 120);
+        transform: scale(1.2);}
+    
+}
+/* @keyframes redHeartColor {
+    0%{color:;}
+    100%{color:white;}
+} */
+@keyframes planeColor {
+    0%{color: white;
+    transform: scale(1);}
+    100%{color:rgb(181, 177, 177);
+    transform: scale(1.2);}
+}
+
+
+@keyframes scale {
+    0% {transform: scale(1.2);}
+    100% {transform: scale(1.2);}
+}
+.fa-xmark{
+    cursor: pointer;
+    position: relative;
+  font-size: 40px;
+  left: 93%;
+  color: rgb(132,132,132);
+}
+
+.fa-envelope{
+    position: relative;
+    font-size: 40px;
+    left: 28%;
+    top : 3%;
+}
+.fa-circle-check {
+    position: fixed;
+    top: 50vh;
+    left: 48vw;
+    font-size: 50px;
+    z-index: 101;
+    color: rgb(153, 251, 5);
+    pointer-events: none;
+    opacity: 0;
+    
+}
+.fa-circle-check.ani{
+    pointer-events: auto;
+    animation: checkbox 1s ease-in 1;
+}
+@keyframes checkbox {
+    
+    0%{opacity: 0; scale:1;}
+    50%{opacity: 1;}
+    90%{opacity: 1; scale: 1;}
+    100%{opacity: 1; scale:1.5;}
+}
+
+
+/* -------------- */
+
+
+
+
+swiper-container {
+    position: relative;
+    top: 70px;
+    width: 300px;
+    height: 460px;
+    left: 60px;
+   
+  }
+
+  swiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 18px;
+    font-size: 22px;
+    font-weight: bold;
+    color: #fff;
+  }
+
+  swiper-slide:nth-child(1n) {
+    background-color: #cbdde6;
+  }
+
+  swiper-slide:nth-child(2n) {
+    background-color: #FEEAFA;
+  }
+
+  swiper-slide:nth-child(3n) {
+    background-color: #EFD3D7;
+  }
+
+  swiper-slide:nth-child(4n) {
+    background-color: #CBC0D3;
+  }
+
+  swiper-slide:nth-child(5n) {
+    background-color: #DEE2FF;
+  }
+
+.swiper {
+    width: 600px;
+    height: 300px;
+}
+
+
+
+
+
+/* Modal ------------------------ */
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+
+    /* 숨기기 */
+    z-index: -1;
+    opacity: 0;
+  }
+
+  .show1 {
+    opacity: 1;
+    z-index: 1000;
+    transition: all 0.5s;
+  }
+
+  .window {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+
+  .popup {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ffffff;
+    box-shadow: 0 2px 7px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+
+    /* 임시 지정 */
+    /* width: 100px;
+    height: 100px; */
+
+    /* 초기에 약간 아래에 배치 */
+    transform: translate(-50%, -40%);
+  }
+
+  .show1 .popup {
+    transform: translate(-50%, -50%);
+    transition: all 0.5s;
+  }
+
+
+.modalDiv {
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 300px;
+    height: 410px;
+    
+}
+.modalDiv > .comment {
+    vertical-align: top;
+    padding-left: 8px;
+    width: 260px;
+    height: 295px;
+    resize: none;
+}
+.modalDiv > hr {
+    margin: 0px;
+    margin-top: 7px;
+    margin-bottom: 7px;
+    width: 260px;
+}
+.send{
+    margin: 0;
+    padding: 0;
+    width: 130px;
+    height: 50px;
+    margin-left: 24%;
+    
+}
+.modalDiv > .circle {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    background-color: rgb(132,132,132);
+    border-radius: 15px;
+    margin-left: 40%;
+
+}
+
+/* --------------- */
+/*가로길이 768이하일 때 ------------- */
+@media screen and (max-width : 768px){
+        .mySwiper{
+            position: relative;
+        margin-top: 30px;
+        left: -15%;
+    }
+    .box1{
+        position: relative;
+        left: -15%;
+        
+    }
+}
