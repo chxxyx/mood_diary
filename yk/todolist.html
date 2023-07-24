@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js" integrity="sha256-lSjKY0/srUM9BE3dPm+c4fBo1dky2v27Gdjm2uoZaL0=" crossorigin="anonymous"></script>
+    
+
+    <!-- nav -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+     <link rel="stylesheet" href="./todolist.css"> 
+    <!-- <link rel="stylesheet" href="./css/nav.css"> -->
+
+
+
+    <title>TODOLIST</title>
+</head>
+<body>
+    
+       <nav class="navbar bg-body-tertiary fixed-top" >
+        <div class="container-fluid" >
+          <a class="navbar-brand" href="#" >
+            <img  id="logo" class="mainlogo" src="./longlogo.png" alt="">
+        </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header" >
+              <h5 class="offcanvas-title" id="offcanvasNavbarLabel" >Mood Diary</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body" >
+              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#">Calendar</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Diary</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Guest Book</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">To Do List</a>
+                </li>
+                
+              </ul>
+              
+            </div>
+          </div>
+        </div>
+      </nav>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+
+<!-- cal -->
+<div class="largestbox">
+
+
+<div class="cal">
+    <section>
+      <div class="title" colspan="5">
+          <div class="ym-box">
+            <span id="cal-year"></span>
+            <span id="cal-month"></span> 
+          </div>
+      </div>
+        <table class="calendar">
+            <thead>
+                <tr>
+                    <td style="color: tomato;">SUN</td>
+                    <td>MON</td>
+                    <td>TUE</td>
+                    <td>WED</td>
+                    <td>THU</td>
+                    <td>FRI</td>
+                    <td style="color: royalblue;">SAT</td>
+                </tr>
+            </thead>
+
+            <tbody class="tbody"></tbody>
+        </table>
+          
+    </section>
+
+   </div>  
+
+
+   
+
+   
+    <div class="mycontainer">
+      <section>
+        
+
+      
+      <div class="todo-wrapper">
+        
+        <div class="todo-title">To Do List</div> 
+        <button class="aza">insert calender</button>
+        <div class="todo-box">
+          
+
+            <div class="todo-input-box">
+                <button class="complete-all-btn">✔</button>
+                <input type="text" class="todo-input" placeholder="해야 할 일을 입력해주세요.">
+                
+            </div>
+            
+            <ul class="todo-list">
+                <!-- <li class="todo-item checked">
+                    <div class="checkbox">✔</div>
+                    <div class="todo">1</div>
+                    <button class="delBtn">x</button>
+                </li>
+                <li class="todo-item">
+                    <div class="checkbox"></div>
+                    <div class="todo">2</div>
+                    <button class="delBtn">x</button>
+                </li>
+                <li class="todo-item">
+                    <div class="checkbox"></div>
+                    <div class="todo">3</div>
+                    <button class="delBtn">x</button>
+                </li>  -->
+            </ul>
+            <div class="todo-bottom">
+                <div class="left_items"></div>
+                <div class="button-group">
+                    <button class="show-all-btn selected" data-type="all">All</button>
+                    <button class="show-active-btn" data-type="active">Active</button>
+                    <button class="show-completed-btn" data-type="completed">Completed</button>
+                </div>
+                <button class="clear-completed-btn">Clear Completed</button>
+            </div>
+        </div>
+        <p class='info'>do your best✔️</p>
+
+       
+      </div>
+    </div>
+  </section>
+ 
+</div>
+
+
+    
+<!-- cal -->
+
+
+
+
+
+
+
+<!-- nav -->
+
+
+ 
+<!-- nav -->
+
+
+
+
+
+    
+    <script src="./todo.js" ></script>
+
+    
+    
+
+
+<!-- //td를 눌러 원하는 날에 넣는다 
+//tolist를 적어서 length를 파악
+//길이가 쌓인다
+// aza버튼을 누르면 leftItemsElem.innerHTML값을 td에 넣는다  -->
+
+
+<script>
+    // let textDt = "";
+    //   $("td").click(function() {
+    //       console.log($(this).children('.date').text());
+    //       td = this;
+    // })
+    //   $(".aze").on("click", function() {
+    //     let indexContent = todos.indexOf(this).text();
+    //     $(textDt).children('.contents').text(indexContent);
+
+    // })
+
+
+      let td = null;
+        $("td").on("click",function(e){
+          console.log(this)
+          td = this
+
+    })//td값 가져오기
+
+    $(".aza").on("click",function(){
+      let leftItems = $(".left_items").text().split(' ')[0]
+      console.log(leftItems)
+
+      $("#td").text(leftItems)
+      $(td).find('div').next().empty()
+      $(td).append (`<div class='yk'>${leftItems}</div>`)
+   
+      // $('.yk').css('border-','5px')
+    })
+
+
+
+
+
+    </script>
+</body>
+</html>
+    
