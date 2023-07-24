@@ -89,7 +89,7 @@ const closeBtn = $('#closeBtn');
 //아이템 선택시 모달 보여주는 함수
 function showModal(emt) {
   modal.css("display", "block")
-  $('#img-box').append(`<img class="in-modal-imoticon" src="./img/${emt}.png" />`);
+  $('#img-box').append(`<img class="in-modal-imoticon" src="../img/${emt}.png" />`);
   // $('#modal-date').append(`<div class="select-dt">${textDt}</div>`);
 }
 
