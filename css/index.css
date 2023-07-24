@@ -377,8 +377,8 @@ body {
 
 @media screen and (max-width: 768px){
     .loading-box {
-    left: -6%;
-    top: 15%;
+    left: -5vw;
+    top: 6vh;
     z-index: 9;
     }
 
@@ -388,7 +388,7 @@ body {
     .progress-bar {
         width: 70px;
         height: 8px;
-        top: 0;
+        top: 1vh;
     }
 }
 
