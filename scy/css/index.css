@@ -1,7 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Ysabeau+Office:wght@400;500;600;700;800;900;1000&display=swap');
 * {
     padding:0;
     margin:0;
     box-sizing: border-box;
+    font-family: 'Ysabeau Office', sans-serif;
 }
 
 body {
@@ -47,34 +49,35 @@ body {
 
 #pleasure{
     position: absolute;
-    left: 33%;
+    left: 33vw;
     top: 29%;
     z-index: 3;
 }
 
 #angry {
     position: absolute;
-    right: 38%;
+    right: 34vw;
     top: 29%;
     z-index: 2;
 }
 
 #happy {
     position: absolute;
-    left: 27%;
+    left: 27vw;
     top: 46%;
     z-index: 6;
 }
 
 #sad {
     position: absolute;
-    right: 31%;
-    top: 47%;
+    right: 28vw;
+    top: 46%;
+    /* top: 60vh; */
     z-index: 4;
 }
 #proud {
     position: absolute;
-    left: 40%;
+    left: 39vw;
     top: 56%;
     z-index: 5;
 }
@@ -87,23 +90,23 @@ body {
     margin: 0;
     border-radius: 10px;
     left: 25%;
-    top: 43%;
+    top: 45%;
     z-index: 10;
-    animation: start 12s linear 1;
+    animation: start 12s linear 1; 
 }
 
 .start img {
     position: absolute;
     width: 80vh;
     height: auto;
-    left: 6%;
+    left: 2vw;
     top: -15%;
 }
 
 .loading-box {
     position: absolute;
-    left: 29%;
-    top: 37%;
+    left: 28vw;
+    top: 47vh;
     z-index: 9;
 }
 
@@ -124,7 +127,8 @@ body {
     font-size: 35px;
     font-weight: 600;
     line-height: 1.3333;
-    color: rgb(79, 79, 79);
+    /* color: rgb(119, 119, 119); */
+    color: rgb(35, 35, 35);
     animation-name: flicker;
     animation-duration: 1500ms;
     animation-iteration-count: infinite;
@@ -136,7 +140,8 @@ body {
     width: 250px;
     height: 20px;
     border-radius: 100px;
-    background-color: rgb(201, 201, 201);
+    /* background-color: rgb(201, 201, 201); */
+    background-color: #FFE8A3;
     overflow: hidden;
 }
 
@@ -147,7 +152,8 @@ body {
     width: 20px;
     height: 20px;
     border-radius: 100px;
-    background-color: #FFE8A3;
+
+    background-color: rgb(171, 213, 226);
     animation-name: loading-bar;
     animation-duration: 5s;
     animation-iteration-count: infinite;
@@ -237,6 +243,66 @@ body {
     }
 }
 
+@media screen and (min-width: 1500px){
+    .start img{
+        left: 4vw;
+        top: -15%;
+    }
+    
+}
+
+@media screen and (min-width: 1500px){
+    #pleasure{
+        left: 35vw;
+        top: 29%;
+    }
+    
+}
+
+@media screen and (min-width: 1500px){
+    #angry{
+        left: 45vw;
+        top: 29%;
+    }
+    
+}
+@media screen and (min-width: 1500px){
+    #sad{
+        left: 49vw;
+        top: 44%;
+    }
+    
+}
+
+@media screen and (min-width: 1500px){
+    #happy{
+        left: 31vw;
+        top: 44%;
+    }
+}
+
+@media screen and (min-width: 1500px){
+    #proud{
+        left: 40vw;
+        top: 54%;
+    }
+}
+
+@media screen and (min-width: 1500px){
+    .loading-box {
+        left: 32vw;
+        top: 40%;
+    }
+
+}
+
+@media screen and (max-width: 768px){
+    .box {
+        top: 50%;
+    }
+    
+}
+
 @media screen and (max-width: 768px){
     #pleasure{
     left: 40%;
@@ -272,7 +338,7 @@ body {
 @media screen and (max-width: 768px){
     #happy{
         left: 34%;
-        top: 47%;
+        top: 45%;
         z-index: 6;
     }
 }
@@ -287,10 +353,9 @@ body {
 
 @media screen and (max-width: 768px){
     .start {
-    width: 45vw;
-    height: 8vh;
-    top: 42%;
-    z-index: 10;
+        width: 45vw;
+        height: 8vh;
+        top: 42%;
     }
 }
 
@@ -298,8 +363,8 @@ body {
     .start img {
         width: 45vw;
         height: auto;
-        left: 3%;
-        top: 0;
+        left: 1vw;
+        top: 4%;
     }
 }
 @media screen and (max-width: 768px){
