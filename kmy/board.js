@@ -4,9 +4,13 @@ console.log(date);
 let year = date.getFullYear()
 let month = date.getMonth()+1
 let day = date.getDate()-1
+let hour = date.getHours()
+let minutes = date.getMinutes()
 let date2 = (`${month >=10 ? month : +month}.${day >=10 ? day :"0"+day}`)
 document.getElementById("date2").innerHTML=date2
 
+let date3 = (`${hour >=10 ? hour : "0"+hour}:${minutes >=10 ? minutes : "0"+minutes}`)
+console.log(date3)
 // function heart(){
 //     const ht=$('.fa-heart');
     

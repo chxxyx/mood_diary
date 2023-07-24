@@ -1,17 +1,49 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Ysabeau+Office:wght@400;500;600;700;800;900;1000&display=swap');
 
 body {
     background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAAXNSR0IArs4c6QAAABhJREFUKFNjZMAD3l257ss4PBSAvILPJwAPGRc57aMbnwAAAABJRU5ErkJggg==
 
     );
+    font-family: 'Ysabeau Office', sans-serif;
 }
+
+/* nav--------------------- */
+
+.navbar{
+    font-family: 'Ysabeau Office', sans-serif;
+    background-color: #efd3d7 !important;
+}
+
+.offcanvas-header{
+    background-color: #CBC0D3;
+}
+.offcanvas-body{
+    background-color: #cbc0d39a;
+
+}
+.navbar-brand{
+
+    padding: 0;
+}
+
+
+.navbar-brand #logo{
+    margin-left: 5%;
+    width: auto;
+    height: 40px;
+}
+.mainlogo{
+    margin-right: 10px;
+}
+/* nav---------------------- */
 
 
 
 
 .friends {
-    top: 60px;
-    font-size: 40px;
+    position: relative;
+    top: 70px;
+    font-size: 30px;
     text-align: center;
 }
 
@@ -23,9 +55,12 @@ body {
     margin-left: 60px;
     padding: 0 100px 0 100px;
     
+    
 }
 .frName{
-    text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
+    /* text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000; */
+    position: relative;
+    top: 50px;
 }
 .frImg{
     width: 250px;
@@ -40,62 +75,74 @@ body {
 /* 왼쪽 박스 ------------------- */
 .box1 {
     position: relative;
-    width:  450px;
-    height: 550px;
-    background-color: rgb(187, 233, 192);
+    width:  400px;
+    height: 480px;
+    background-color: #DEE2FF;
     border-radius: 18px;
     padding: 20px;
+    left: 3%;
+    top: 60px;
     
 }
 #date2{
     position: absolute;
-    left: 5%
-    
+    left: 5%;
+    font-size: 25px;
+    top : -50px;
+    background-color: rgba(134, 114, 114, 0.468);
+    color: white;
+    font-weight: bold;
+    padding: 2px 10px 2px 10px;
+    border-radius: 5px;
 }
 .myTop {
 
 }
 .myName {
+    text-align: center;
     font-size: 40px;
-    width: 410px;
-    height: 50px;
-    background-color: rgba(0, 0, 0, 0.223);
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #fff;
 }
 .myMoodText{
     font-size: 20px;
 }
 .myTop>.myMoodImg {
     position: relative;
-    width: 200px;
-    height: 178px;
-    left: 24%;
+    width: 150px;
+    height: 128px;
+    left: 28%;
 }
 
 .myBot{
-    width: 410px;
-    height: 225px;
+    width: 360px;
+    height: 215px;
+    margin-top: 20px;
     background-color: rgb(255,255,255,0.4);
+    border-radius: 5px;
 }
 .myLike{
-    padding: 15px;
+    padding: 8px;
 }
 .myComment {
     overflow: auto;
     margin: 0;
-    width: 410px;
+    width: 350px;
     height: 140px;
-    padding-left: 20px;
-    padding-right: 30px;
+    padding-left: 10px;
+    padding-right: 0px;
 }
 td {
     text-align: left;
     vertical-align: top;
     word-break: break-all;
-    width: 350px;
+    width: 330px;
 }
 th {
+    font-size: 14px;
     width: 60px;
-    text-align: left;
+    text-align: center;
     vertical-align: top;
 }
 hr {
@@ -105,17 +152,30 @@ hr {
     margin: 5px;
 }
 .commentHr{
-    margin: 15px;
+    width: 306px;
+    margin: 9px;
 }
+.counta{
+    position: relative;
+    font-size: 14px;
+}
+.counta > .time {
+    position: absolute;
+    left: 240px;
+    bottom: -12px;
+    font-size: 10px;
+}
+
+
 /* -------------------------------- */
 /* 왼쪽 박스 icon ------------------ */
 .fa-comment {
     margin-left: 10px;
-    font-size: 35px;
+    font-size: 30px;
 }
 .redHeart2 {
     color: rgb(244, 120, 120);
-    font-size: 35px;
+    font-size: 30px;
     
 }
 
@@ -144,8 +204,9 @@ hr {
 }
 .imgs{
     display: flex;
-    width: 250px;
-    
+    width: 200px;
+    height: auto;
+
     
 }
 .frBtn{
@@ -159,7 +220,11 @@ hr {
 /* FrCard icon --------------------- */
 
 .heart{
-    font-size: 70px;
+    position: relative;
+    left: 20px;
+    top : -20px;
+    font-size: 50px;
+    rotate: -20deg;
     
 }
 .heart:hover {
@@ -172,8 +237,11 @@ hr {
 
 
 .redHeart{
-    color: red;
-    font-size: 70px;
+    position: relative;
+    left: 20px;
+    top : -20px;
+    color: rgb(244, 120, 120);
+    font-size: 50px;
     
 }
 .redHeart:hover {
@@ -200,7 +268,10 @@ hr {
     
 } */
 .boldplane{
-    font-size: 70px;
+    position: relative;
+    right: 20px;
+    top : -20px;
+    font-size: 50px;
     color: white
 }
 .modalBoldPlane {
@@ -217,7 +288,7 @@ hr {
 }
 @keyframes heartColor {
     0%{transform: scale(1);}
-    100%{color: red;
+    100%{color: rgb(244, 120, 120);
         transform: scale(1.2);}
     
 }
@@ -228,7 +299,7 @@ hr {
 @keyframes planeColor {
     0%{color: white;
     transform: scale(1);}
-    100%{color:navy;
+    100%{color:rgb(181, 177, 177);
     transform: scale(1.2);}
 }
 
@@ -281,8 +352,11 @@ hr {
 
 
 swiper-container {
-    width: 350px;
-    height: 550px;
+    position: relative;
+    top: 70px;
+    width: 300px;
+    height: 460px;
+    left: 60px;
    
   }
 
@@ -297,7 +371,7 @@ swiper-container {
   }
 
   swiper-slide:nth-child(1n) {
-    background-color: #DEE2FF;
+    background-color: #cbdde6;
   }
 
   swiper-slide:nth-child(2n) {
@@ -313,17 +387,14 @@ swiper-container {
   }
 
   swiper-slide:nth-child(5n) {
-    background-color: #8E9AAF;
+    background-color: #DEE2FF;
   }
 
 .swiper {
     width: 600px;
     height: 300px;
 }
-#date2{
-    font-size: 40px;
-    top : -50px;
-}
+
 
 
 
@@ -343,7 +414,7 @@ swiper-container {
     opacity: 0;
   }
 
-  .show {
+  .show1 {
     opacity: 1;
     z-index: 1000;
     transition: all 0.5s;
@@ -372,7 +443,7 @@ swiper-container {
     transform: translate(-50%, -40%);
   }
 
-  .show .popup {
+  .show1 .popup {
     transform: translate(-50%, -50%);
     transition: all 0.5s;
   }
@@ -420,3 +491,16 @@ swiper-container {
 }
 
 /* --------------- */
+/*가로길이 768이하일 때 ------------- */
+@media screen and (max-width : 768px){
+        .mySwiper{
+            position: relative;
+        margin-top: 30px;
+        left: -15%;
+    }
+    .box1{
+        position: relative;
+        left: -15%;
+        
+    }
+}
