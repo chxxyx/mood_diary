@@ -108,7 +108,7 @@ const writeModal = document.getElementById('modalWrap-2');
     pleasureBtn.onclick = function() {
         modal.style.display = 'none'; // 처음 이모지 모달은 없애기
         writeModal.style.display = 'block'; // 작성 모달
-        $('#img-box').append(`<img class="in-modal-imoticon" src="../img/기쁨.png" />`);
+        $('#img-box').append(`<img class="in-modal-imoticon" src="../img/pleasure.png" />`);
         $('#modal-date').append(`<div class="select-dt">${textDt}</div>`);
         setImg("pleasure");
     }
@@ -118,7 +118,7 @@ const writeModal = document.getElementById('modalWrap-2');
     sadBtn.onclick = function() {
         modal.style.display = 'none';
         writeModal.style.display = 'block';
-        $('#img-box').append(`<img class="in-modal-imoticon" src="../img/슬픔.png" />`);
+        $('#img-box').append(`<img class="in-modal-imoticon" src="../img/sad.png" />`);
         $('#modal-date').append(`<div class="select-dt">${textDt}</div>`);
         setImg("sad");
     }
@@ -127,7 +127,7 @@ const writeModal = document.getElementById('modalWrap-2');
     happyBtn.onclick = function() {
         modal.style.display = 'none';;
         writeModal.style.display = 'block';
-        $('#img-box').append(`<img class="in-modal-imoticon" src="../img/행복.png" />`);
+        $('#img-box').append(`<img class="in-modal-imoticon" src="../img/happy.png" />`);
         $('#modal-date').append(`<div class="select-dt">${textDt}</div>`);
         setImg("happy");
     }
@@ -136,7 +136,7 @@ const writeModal = document.getElementById('modalWrap-2');
     angryBtn.onclick = function() {
         modal.style.display = 'none';
         writeModal.style.display = 'block';
-        $('#img-box').append(`<img class="in-modal-imoticon" src="../img/화남.png" />`);
+        $('#img-box').append(`<img class="in-modal-imoticon" src="../img/angry.png" />`);
         $('#modal-date').append(`<div class="select-dt">${textDt}</div>`);
         setImg("angry");
     }
@@ -145,7 +145,7 @@ const writeModal = document.getElementById('modalWrap-2');
     proudBtn.onclick = function() {
         modal.style.display = 'none';
         writeModal.style.display = 'block';
-        $('#img-box').append(`<img class="in-modal-imoticon" src="../img/뿌듯.png" />`);
+        $('#img-box').append(`<img class="in-modal-imoticon" src="../img/proud.png" />`);
         $('#modal-date').append(`<div class="select-dt">${textDt}</div>`);
         setImg("proud");
     }
@@ -171,15 +171,15 @@ const writeModal = document.getElementById('modalWrap-2');
 
     function setImg(img) {
         if(img == "pleasure") {
-            $(selectDt).children('.contents').append(`<img class="modal-img" src="../img/기쁨.png" />`);
+            $(selectDt).children('.contents').append(`<img class="modal-img" src="../img/pleasure.png" />`);
         } else if (img == "sad") {
-            $(selectDt).children('.contents').append(`<img class="modal-img" src="../img/슬픔.png" />`);
+            $(selectDt).children('.contents').append(`<img class="modal-img" src="../img/sad.png" />`);
         } else if (img == "happy") {
-            $(selectDt).children('.contents').append(`<img class="modal-img" src="../img/행복.png" />`);
+            $(selectDt).children('.contents').append(`<img class="modal-img" src="../img/happy.png" />`);
         } else if (img == "angry") {
-            $(selectDt).children('.contents').append(`<img class="modal-img" src="../img/화남.png" />`);
+            $(selectDt).children('.contents').append(`<img class="modal-img" src="../img/angry.png" />`);
         } else if (img == "proud") {
-            $(selectDt).children('.contents').append(`<img class="modal-img" src="../img/뿌듯.png" />`);
+            $(selectDt).children('.contents').append(`<img class="modal-img" src="../img/proud.png" />`);
         } 
     }
 
