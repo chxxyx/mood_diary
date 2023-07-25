@@ -347,7 +347,6 @@ body {
     
 }
 
-
 /* Mobile - Portrait */
 @media (max-width: 375px) {
     .img-box img {
@@ -388,13 +387,3 @@ body {
         z-index: 3;
     }
 }
-
-/* Mobile - Landscape */
-@media (min-width: 576px) and (max-width: 767px) {
-
-   
-}
-
-/* Desktop */
-@media (min-width: 992px) and (max-width: 1199px) {}
-
