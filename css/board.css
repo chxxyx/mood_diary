@@ -45,6 +45,7 @@ body {
     top: 70px;
     font-size: 30px;
     text-align: center;
+    font-weight: 600;
 }
 
 .main1{
@@ -75,13 +76,13 @@ body {
 /* 왼쪽 박스 ------------------- */
 .box1 {
     position: relative;
-    width:  400px;
-    height: 480px;
+    width:  320px;
+    height: 460px;
     background-color: #DEE2FF;
     border-radius: 18px;
     padding: 20px;
-    left: 3%;
-    top: 60px;
+    left: 8%;
+    top: 70px;
     
 }
 #date2{
@@ -95,9 +96,9 @@ body {
     padding: 2px 10px 2px 10px;
     border-radius: 5px;
 }
-.myTop {
+/* .myTop {
 
-}
+} */
 .myName {
     text-align: center;
     font-size: 40px;
@@ -112,36 +113,41 @@ body {
     position: relative;
     width: 150px;
     height: 128px;
-    left: 28%;
+    left: 21%;
 }
 
 .myBot{
-    width: 360px;
-    height: 215px;
+    width: 280px;
+    height: 205px;
     margin-top: 20px;
     background-color: rgb(255,255,255,0.4);
     border-radius: 5px;
 }
 .myLike{
-    padding: 8px;
+    padding: 8px 8px 8px 25px;
+    
 }
 .myComment {
     overflow: auto;
     margin: 0;
-    width: 350px;
+    width: 270px;
     height: 140px;
     padding-left: 10px;
     padding-right: 0px;
 }
 td {
+    position: relative;
+    top : 1px;
     text-align: left;
     vertical-align: top;
     word-break: break-all;
-    width: 330px;
+    width: 250px;
 }
 th {
+    position: relative;
+    right: 5px;
     font-size: 14px;
-    width: 60px;
+    width: 70px;
     text-align: center;
     vertical-align: top;
 }
@@ -152,17 +158,21 @@ hr {
     margin: 5px;
 }
 .commentHr{
-    width: 306px;
-    margin: 9px;
+    position: relative;
+    
+    width: 226px;
+    margin: 7px 9px 9px 9px;
 }
 .counta{
     position: relative;
-    font-size: 14px;
+    font-size: 13px;
+    width: 180px;
+    right: 8px;
 }
 .counta > .time {
     position: absolute;
-    left: 240px;
-    bottom: -12px;
+    left: 150px;
+    bottom: -10px;
     font-size: 10px;
 }
 
@@ -171,11 +181,11 @@ hr {
 /* 왼쪽 박스 icon ------------------ */
 .fa-comment {
     margin-left: 10px;
-    font-size: 30px;
+    font-size: 27px;
 }
 .redHeart2 {
     color: rgb(244, 120, 120);
-    font-size: 30px;
+    font-size: 27px;
     
 }
 
