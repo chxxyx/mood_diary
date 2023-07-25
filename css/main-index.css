@@ -44,7 +44,7 @@ section {
   margin-bottom: 30px;
   position: absolute;
   left: 50%;
-  top: 60%;
+  top: 55%;
   transform: translate(-50%, -50%);
 }
 .title {
@@ -64,7 +64,7 @@ section {
 
 thead td {
     width: 200px;
-    height: 70px;
+    height: 45px;
     font-weight: 600;
     color: rgb(90, 90, 90);
     
@@ -72,7 +72,7 @@ thead td {
 
 tbody td {
     width: 200px;
-    height: 50px;
+    height: 30px;
     cursor: pointer;
     color: rgb(90, 90, 90);
     transform: scale(1.0); /* 이미지 확대 */
@@ -87,7 +87,7 @@ tbody td:hover {    /* hover 시 애니메이션 */
 .calendar {
     text-align: center;
     margin: 0 auto;
-    height: 700px;
+    height: 400px;
     opacity: 0.7;
 }
 
@@ -315,109 +315,114 @@ tbody td:hover {    /* hover 시 애니메이션 */
     height: 50px;
   }
 
-  /* 반응형 */
-/* 캘린더 섹션 */
 @media screen and (max-width: 768px){
   section {
       width: 100%;
       height: 100%;
+      top: 60%;
   }
-}
-
-@media screen and (max-width: 768px){
   #modalBody {
-      position: relative;
-      width: 400px;
-      height: 400px;
-      top: 5%;
+    position: relative;
+    width: 400px;
+    height: 400px;
+    top: 5%;
   }
-}
-@media screen and (max-width: 768px){
   #modalBody img {
     position: relative;
     width: 80px;
     height: 80px;
   }
-}
-@media screen and (max-width: 768px){
   #modalBody-2 {
-      position: absolute;
-      left: 20%;
-      top: 12%;
+    position: absolute;
+    left: 20%;
+    top: 12%;
 
-      width: 300px;
-      height: 600px;
+    width: 300px;
+    height: 600px;
   }
-}
-@media screen and (max-width: 768px){
+
   .in-modal-imoticon {
-      width: 160px;
-      height: 150px;
-      position: absolute;
-      left: 30%;
-      top: 0;
+    width: 160px;
+    height: 150px;
+    position: absolute;
+    left: 30%;
+    top: 0;
   }
-}
-
-@media screen and (max-width: 768px){
   .diary-box {
-      width: 90%;
-      height: 45%;
-      position: absolute;
-      left: 5%;
-      top: 52%;
+    width: 90%;
+    height: 45%;
+    position: absolute;
+    left: 5%;
+    top: 52%;
   }
-}
 
-@media screen and (max-width: 768px){
   .modal-input-title {
     position: absolute;
     width: 10%;
     left: 5%;
     top: 40%;
   }
-}
-
-@media screen and (max-width: 768px){
   .input-title {
     position: relative;
     width: 250px;
     left: 10px;
     
   }
-}
-
-@media screen and (max-width: 768px) {
   .input-title:focus ~ .input-span, .input-title:valid ~ .input-span {
     width: 260px;
   }
-}
 
-@media screen and (max-width: 768px){
   .modal-date {
     position: absolute;
     top: 3%;
     left: 10%;
     font-size: 40px;
   }
-}
 
-@media screen and (max-width: 768px){
   #closeBtn {
     position: absolute;
     right: 5%;
     top: 2%;
     font-size: 30px;
   }
-}
 
-@media screen and (max-widht: 768px){
   .contents img {
     position: absolute;
     left: 50%;
-    top: 30%;
+    top: 70%;
     transform: translate(-50%, -70%);
     width: 40px;
     height: 40px;
+  }
+}
+
+@media (max-width: 375px) {
+  #modalBody {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    top: 5%;
+  }
+  #modalBody img {
+    position: relative;
+    width: 60px;
+    height: 60px;
+  }
+
+  i {
+    font-size: 2rem;
+  }
+  #modalBody-2 {
+    position: absolute;
+    left: 10%;
+    top: 12%;
+
+    width: 300px;
+    height: 600px;
+  }
+  .contents img {
+    position: absolute;
+    top: 70%;
+
   }
 }

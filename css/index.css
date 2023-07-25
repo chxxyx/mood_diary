@@ -248,47 +248,27 @@ body {
         left: 4vw;
         top: -15%;
     }
-    
-}
-
-@media screen and (min-width: 1500px){
     #pleasure{
         left: 35vw;
         top: 29%;
     }
-    
-}
-
-@media screen and (min-width: 1500px){
     #angry{
         left: 45vw;
         top: 29%;
     }
-    
-}
-@media screen and (min-width: 1500px){
     #sad{
         left: 49vw;
         top: 44%;
     }
-    
-}
-
-@media screen and (min-width: 1500px){
     #happy{
         left: 31vw;
         top: 44%;
     }
-}
 
-@media screen and (min-width: 1500px){
     #proud{
         left: 40vw;
         top: 54%;
     }
-}
-
-@media screen and (min-width: 1500px){
     .loading-box {
         left: 32vw;
         top: 40%;
@@ -296,106 +276,114 @@ body {
 
 }
 
-@media screen and (max-width: 768px){
-    .box {
-        top: 50%;
-    }
-    
-}
-
-@media screen and (max-width: 768px){
-    #pleasure{
-    left: 40%;
-    top: 35%;
-    z-index: 3;
-    }
-}
-
-@media screen and (max-width: 768px){
-    #angry{
-        right: 39%;
-        top: 35%;
-        z-index: 2;
-    }
-}
-
-@media screen and (max-width: 768px){
-    #sad{
-    right: 35%;
-    top: 47%;
-    z-index: 4;
-    }
-}
-
-@media screen and (max-width: 768px){
-    #proud{
-        left: 44%;
-        top: 55%;
-        z-index: 5;
-    }
-}
-
-@media screen and (max-width: 768px){
-    #happy{
-        left: 34%;
-        top: 45%;
-        z-index: 6;
-    }
-}
-
-/* 이모지 줄이기 */
-@media screen and (max-width: 768px){
+@media screen and (max-width: 575px){
     .img-box img {
         width: 50px;
         height: 50px;
     }
-}
+    .intro-modal-box {
+        top: 50%;
+    }
+    .loading-box {
+        position: absolute;
+        left: -6%;
+        top: 15%;
+        z-index: 9;
+    }
+    .loading-title {
+        font-size: 10px;
+        margin-bottom: 5px;
+    }
 
-@media screen and (max-width: 768px){
+    .progress-bar {
+        width: 70px;
+        height: 8px;
+        top: 1%;
+    }
+
+    .progress-bar-gauge {
+        height: 8px;
+    }
+
     .start {
         width: 45vw;
         height: 8vh;
         top: 42%;
     }
-}
 
-@media screen and (max-width: 768px){
     .start img {
         width: 45vw;
         height: auto;
-        left: 1vw;
-        top: 4%;
+        left: 0;
+        top: 8%;
     }
-}
-@media screen and (max-width: 768px){
-    .loading-title {
-    font-size: 10px;
-    margin-bottom: 5px;
+
+    #proud{
+        left: 44%;
+        top: 55%;
+        z-index: 5;
     }
+    #happy{
+        left: 34%;
+        top: 45%;
+        z-index: 6;
+    }
+
+    #sad{
+        right: 35%;
+        top: 47%;
+        z-index: 4;
+    }
+    #angry{
+        right: 39%;
+        top: 35%;
+        z-index: 2;
+    }
+    #pleasure{
+        left: 40%;
+        top: 35%;
+        z-index: 3;
+    }
+    
 }
 
-
-@media screen and (max-width: 768px){
+/* Mobile - Portrait */
+@media (max-width: 375px) {
+    .img-box img {
+        width: 50px;
+        height: 50px;
+    }
     .loading-box {
-    left: -6%;
-    top: 15%;
-    z-index: 9;
+        position: absolute;
+        left: -22%;
+        top: 5%;
+        z-index: 9;
     }
 
-}
+    #proud{
+        left: 44%;
+        top: 55%;
+        z-index: 5;
+    }
+    #happy{
+        left: 34%;
+        top: 45%;
+        z-index: 6;
+    }
 
-@media screen and (max-width: 768px){
-    .progress-bar {
-        width: 70px;
-        height: 8px;
-        top: 0;
+    #sad{
+        right: 33%;
+        top: 46%;
+        z-index: 4;
+    }
+    #angry{
+        right: 38%;
+        top: 32%;
+        z-index: 2;
+    }
+    #pleasure{
+        left: 38%;
+        top: 32%;
+        z-index: 3;
     }
 }
-
-
-@media screen and (max-width: 768px){
-    .progress-bar-gauge {
-        height: 8px;
-    }
-}
-

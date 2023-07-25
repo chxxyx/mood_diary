@@ -72,6 +72,8 @@ function emtFilter(emt) {
   let cntSum = countItem();
 
   if (cntSum == 0) {
+    $('.noshow').remove()
+    console.log($('.myContainer').children('.noshow'))
     $('.myContainer').after(`<div class='noshow' style='text-align:center; padding:50px;font-size:20px; color:grey;'>작성된 일기가 없어요!😅</div>`);
   }else{
     $('.noshow').remove()
