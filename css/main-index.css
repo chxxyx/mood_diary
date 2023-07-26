@@ -395,6 +395,19 @@ tbody td:hover {    /* hover 시 애니메이션 */
     height: 40px;
   }
 }
+@media (max-width: 414px) {
+  #modalBody-2 {
+    left: 13%;
+    top: 12%;
+  }
+}
+
+@media (max-width: 412px) {
+  #modalBody-2 {
+    left: 13%;
+    top: 12%;
+  }
+}
 
 @media (max-width: 375px) {
   #modalBody {
@@ -423,6 +436,12 @@ tbody td:hover {    /* hover 시 애니메이션 */
   .contents img {
     position: absolute;
     top: 70%;
+  }
+}
 
+@media (max-width: 360px) {
+  #modalBody-2 {
+    left: 9%;
+    top: 12%;
   }
 }

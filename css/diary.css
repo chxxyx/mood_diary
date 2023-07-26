@@ -67,6 +67,17 @@ body {
   padding: 1px 10px 1px 10px;
   font-weight: bolder;
   cursor: default;
+  height: fit-content;
+  
+}
+#months{
+  display: flex;
+  margin-top: 0px;
+}
+#months *{
+  padding: 1px 5px 1px 5px;
+    margin: 10px;
+    opacity: 0.7;
 }
 .filters #all{
   color:pink;
@@ -83,14 +94,19 @@ body {
   opacity: 0.7;
 
 }
-
+#moods{
+  display: flex;
+  margin-top: 0px;
+}
 #mood{
   background-color: pink;
   color: white !important;
   padding: 1px 10px 1px 10px;
   font-weight: bolder;
   cursor: default;
+  height: fit-content;
 }
+
 .myContainer{
   display: flex;
   flex-wrap: wrap;
@@ -320,6 +336,37 @@ label {
     position: absolute;
     top: 0;
     left: 8%;
+  }
+}
+
+@media screen and (max-width: 460px){
+  .diary > .filters > .monthSel{
+    display: block;    
+  }
+  #months{
+    display: flex;
+    justify-content: center;
+  }
+  #monthMenu{
+    width: fit-content;
+    text-align: center;
+    margin-left: 40%;
+  }
+  #months *{
+    padding: 1px 5px 1px 5px;
+    margin: 10px;
+    opacity: 0.7;
+  }
+  #mood{
+    width: fit-content;
+    text-align: center;
+    margin-left: 40%;
+  }
+  #moods{
+    display: flex;
+  }
+  .filterList{
+    display: block;
   }
 }
 
