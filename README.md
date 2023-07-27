@@ -20,4 +20,3 @@ KDT-9기 1차 Team-Project <br/>
 <br/>
 
 LINK : https://main--zingy-seahorse-ef01d5.netlify.app/
-Trello : https://trello.com/invite/b/wT6ydKOM/ATTId8bed8125dc75761ed14f6f7dd235ff392394DC1/develop
