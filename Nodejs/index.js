@@ -1,26 +1,46 @@
-// const http = require('http');
+const express = require('express');
+//= import express from 'espress'
 
-// const server = http.createServer(function(req,res){
-//     res.writeHead(200);
-//     res.write("<hi>hello world<h1/>");
-//     res.end('<p>END<p/>');
-// })
+const app =express();
+const PORT = 8008;
 
-//파일전송 
+app.set('view engine','ejs');
+app.set("views",'./views');
 
-const http = require('http');
-const fs = require('fs');
-try {
-    const data = fs.readFile('./index.html');
-    res.writeHead(200);
-    res.end(data);
-} catch (error) {
-    console.log(error);
-    res.writeHead(404);
-    res.end(error.message);
-}
+//이렇게 쓰세유
 
-server.listen(8000, function(){
-    console.log('8000번 포트로 실행');
+//정적인 파일 불러오기
 
-});
+app.use('/public',express.static('./public'));
+// app.use('/',express.static('./public'))
+// app.use('/',express.static(''))
+
+
+
+//경로를 지정하주기
+
+app.get('/',(req,res)=>{
+    // res.send("Hello Express")
+       
+    //send() 클라이언트에 응답 데이터를 보낼 때 no
+    res.send({result:true, code:1000, message:'회원가입성공',data : {name:'yk'}});
+
+})
+
+
+//get : http 통신을 나타냄
+//send :문자열 데이터를 보낸다 따라서 hello express로 뜸
+//localhost : 8000/ 뒤에 없으면 무시 
+//req res순서 주의 
+app.get('/kdt9',(req,res)=>{
+    res.render('test',{num:[2,3,4,5,6,7,8,9]})
+    // res.render('test')
+    //test라는 파일을 알아서 찾음
+    // res.send("Hello kdt9")
+
+})
+
+
+app.listen(PORT,()=>{
+    console.log(`http://localhost:${PORT}`);
+})
